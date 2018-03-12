@@ -1,4 +1,4 @@
-baseurl = "http://lpdata.me/"
+baseurl = "https://lpdata.me/"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Data Musings"
