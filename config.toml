@@ -1,19 +1,25 @@
 baseurl = "https://lpdata.me/"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
+
 title = "Data Musings"
 theme = "beautifulhugo"
+
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
+
 #pygmentsUseClassic = true
 #pygmentOptions = "linenos=inline"
+
 disqusShortname = ""
 googleAnalytics = "UA-115577465-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
+googlefonts = "https://fonts.googleapis.com/css?family=Itim|Limelight"
+ 
 [Params]
   subtitle = "Data thoughts with a Canadian perspective"
   logo = "img/avatar-icon.png"
@@ -24,6 +30,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   comments = true
   readingTime = true
   useHLJS = true
+  description = "Learning about R, data visualization and data science with a Canadian perspective."
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 #[[Params.bigimg]]
@@ -39,28 +46,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #  desc = "Hexagon"
 
 [Author]
-  name = "Some Person"
-  website = "yourwebsite.com"
-  email = "youremail@domain.com"
-  facebook = "username"
-  googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
-  github = "username"
-  gitlab = "username"
-  twitter = "username"
-  reddit = "username"
-  linkedin = "username"
-  xing = "username"
-  stackoverflow = "users/XXXXXXX/username"
-  snapchat = "username"
-  instagram = "username"
-  youtube = "user/username" # or channel/channelname
-  soundcloud = "username"
-  spotify = "username"
-  bandcamp = "username"
-  itchio = "username"
-  vk = "username"
-  paypal = "username"
-  telegram = "username"
+  name = "Lawrence Pilch"
+  website = "lpdata.com"
+  email = "law9723@gmail.com"
 
 [[menu.main]]
     name = "Blog"
