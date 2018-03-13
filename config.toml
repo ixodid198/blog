@@ -18,7 +18,7 @@ disqusShortname = ""
 googleAnalytics = "UA-115577465-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-googlefonts = "https://fonts.googleapis.com/css?family=Itim|Limelight"
+googlefonts = "//fonts.googleapis.com/css?family=Itim|Limelight"
  
 [Params]
   subtitle = "Data thoughts with a Canadian perspective"
