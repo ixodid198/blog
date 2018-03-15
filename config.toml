@@ -1,8 +1,9 @@
 baseurl = "https://lpdata.me/"
 DefaultContentLanguage = "en"
-#DefaultContentLanguage = "ja"
 
-title = "Data Musings"
+paginate = 10
+
+title = "Thoughtful Wanderings"
 theme = "beautifulhugo"
 
 metaDataFormat = "yaml"
@@ -18,20 +19,18 @@ disqusShortname = ""
 googleAnalytics = "UA-115577465-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
-googlefonts = "//fonts.googleapis.com/css?family=Itim|Limelight"
- 
 [Params]
   subtitle = "Data thoughts with a Canadian perspective"
-  logo = "img/avatar-icon.png"
+  logo = "img/tree_small.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
   commit = false
   rss = true
   comments = true
-  readingTime = true
+  readingTime = false
   useHLJS = true
   description = "Learning about R, data visualization and data science with a Canadian perspective."
-#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+  googlefonts = "https://fonts.googleapis.com/css?family=Lato|Lora"
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"

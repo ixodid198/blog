@@ -1,7 +1,48 @@
+ <!DOCTYPE html>
  {{ if .Site.Params.googlefonts }}
  <link rel="stylesheet" href="{{ .Site.Params.googlefonts }}" type="text/css" media="all" /> 
  {{ end }}
 
+<style>
+  .intro-header .page-heading h1 {    /*  Main title   */
+    font-family: 'Lato';
+    font-size: 60px;
+    font-weight: bolder;
+    color: rgb(40, 40, 40);
+  }
+   h2.post-title {                    /*  Post title */
+    font-family: 'Lato';
+    color: rgb(40, 40, 40);
+  }
+  h3#my-history {                     /* h3 title used in About */
+    font-family: 'Lato';
+    color: rgb(40, 40, 40);
+  }
+  p {                                 /*  Text body of post */
+    font-family: 'Lora';
+    color: black;
+  }
+  .navbar-custom {                    /*  Menu - left */
+    color: rgb(0, 0, 250);
+  }
+  .navbar-custom .nav li a {          /*  Menu - right */
+    font-family: 'Lato';
+    color: rgb(80, 80, 80);
+  }
+   .tags-heading h1 {                 /*  Tags main title */
+    font-family: 'Lato';
+    font-size: 60px;
+    font-weight: bolder;
+    color: rgb(40, 40, 40);
+  }
+  .panel-title {                      /*  Tag names in table  */
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(100, 100, 100); ;
+  }
+  
+</style>
 
 <!--
 If you want to include any custom html just before </head>, put it in this file.
