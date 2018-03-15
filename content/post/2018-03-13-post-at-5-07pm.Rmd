@@ -1,6 +1,6 @@
 ---
 title: Post at 5:07pm
-subtitle: A tale of woe
+subtitle: Inflation?
 author: Lawrence Pilch
 date: '2018-03-13'
 slug: post-at-5-07pm
