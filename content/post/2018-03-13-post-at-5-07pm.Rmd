@@ -1,5 +1,5 @@
 ---
-title: Post at 5:07pm
+title: Time...
 subtitle: Inflation?
 author: Lawrence Pilch
 date: '2018-03-13'
@@ -9,7 +9,7 @@ categories:
 tags: []
 ---
 
-This is where the text of the post goes. Written in RMarkdown its easy to do *this* and **this**. And even this:
+This is where the text of the post goes. Written in RMarkdown, its easy to do *this* and **this**. And even this:
 
 x | y
 ------------- | -------------
