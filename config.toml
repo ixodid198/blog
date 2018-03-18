@@ -45,7 +45,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 #  desc = "Hexagon"
 
 [Author]
-  name = "Lawrence Pilch"
+  name = "First Last"
   website = "lpdata.com"
   email = "law9723@gmail.com"
 
