@@ -15,6 +15,7 @@ subtitle: ''
 Here's a map
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
+
 # Create neighbourhood map of toronto
 # Colour 140 neighbourhoods according to B&E activity (2014-2017)
 # 
@@ -32,16 +33,16 @@ df <- read_csv("/Users/law/Dropbox/R/to_crime/data/MCI_2014_to_2017.csv")
 be <- filter(df, MCI == "Break and Enter")
 
 # Read neighbourhood shapefile
-hood_shp <- st_read("/Users/law/Dropbox/R/to_crime/data/neighbourhoods_wgs84/NEIGHBORHOODS_WGS84.shp")
+hood_shp <- st_read("/Users/law/Dropbox/R/to_crime/data/neighbourhoods_wgs84/NEIGHBORHOODS_WGS84.shp", quiet = TRUE)
 
 # Read neighbourhood pop'n data
 hood_pop <- read_csv("/Users/law/Dropbox/R/to_crime/data/hood_pop.csv") 
 
 # Read street data. TO streets, rivers, walkways, boundaries, highways
-rd <- st_read("/Users/law/Dropbox/R/to_crime/data/centreline_wgs84/CENTRELINE_WGS84.shp") 
+rd <- st_read("/Users/law/Dropbox/R/to_crime/data/centreline_wgs84/CENTRELINE_WGS84.shp", quiet = TRUE) 
 
 # Read park data
-parks <-  st_read("/Users/law/Dropbox/R/to_crime/data/city_green_space_wgs84/CITY_GREEN_SPACE_WGS84.shp")
+parks <-  st_read("/Users/law/Dropbox/R/to_crime/data/city_green_space_wgs84/CITY_GREEN_SPACE_WGS84.shp", quiet = TRUE)
 
 # How many of each street type is there?
 rd_desc <- rd %>% 
@@ -134,7 +135,8 @@ map %>% addPolygons(data = hood_shp,
     color = "white",
     dashArray = "",
     fillOpacity = 0.7,
-    bringToFront = TRUE),
+    bringToFront = TRUE,
+    sendToBack = TRUE),
   
   label = labels,
   labelOptions = labelOptions(
