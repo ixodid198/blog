@@ -1,0 +1,144 @@
+---
+title: Visualizing Population Change
+author: Lawrence Pilch
+date: '2018-03-31'
+slug: visualizing-population-change
+categories:
+  - Canada
+  - Visualization
+tags:
+  - Canada
+  - Visualization
+subtitle: The Slope Graph
+---
+
+Every time I've visited Newfoundland and Labrador I've loved it. So, when I hear about the shrinking of small towns there my ears perk up. I thought it would be interesting to visualize the change in communities of all size across all provinces between 2001 and 2016. There are many ways to look at this, here are two. In this post I use the term "city" and "community" interchangeably.
+
+First, a table. Unlikely the first thing to come to mind when thinking data visualization, but not everything has to be New York Times quality D3 animation to enlighten.
+
+```{r, echo = FALSE, message = FALSE}
+library(tidyverse)
+library(formattable)
+library(kableExtra)
+library(knitr)
+
+# My version of color_bar with square bars
+color_bar <- function (color = "lightgray", fun = "proportion", ...) 
+{
+  fun <- match.fun(fun)
+  formatter("span", style = function(x) style(display = "inline-block", 
+                                              direction = "rtl", `border-radius` = "0px", `padding-right` = "0px", 
+                                              `background-color` = csscolor(color), width = percent(fun(as.numeric(x), 
+                                                                                                        ...))))
+}
+
+# Called by color_bar. % of all cities in province. 
+fraction <- function(x, df) {
+  x/df$count
+}
+
+# Called by color_bar. Change color of bar based on these ranges 0-0.5, 0.5-0.75, >0.75 DECREASING
+colour_dec <- function(pop_cities, df) {
+  ifelse(pop_cities/df$count > 0.75, c <- "#f46d43", ifelse(pop_cities/df$count < 0.5, c <- "#fee08b", c <- "#fdae61"))
+}
+
+# Called by color_bar. Change color of bar based on these ranges: 0-0.5, 0.5-0.75, >0.75  INCREASING
+colour_inc <- function(pop_cities, df) {
+  ifelse(pop_cities/df$count > 0.75, c <- "#66bd63", ifelse(pop_cities/df$count < 0.5, c <- "#d9ef8b", c <- "#a6d96a"))
+}
+
+# Read 2001, 2016 population for all cities in Canada > 10 
+# Count # cities that decrease/increase in pop'n for each province
+
+df <- read_csv(file = "prov_city.csv")
+
+# Add color bars and make color of bars dependent on value
+mutate(df,
+       Province = ifelse(Decreasing/df$count > 0.75, 
+                         cell_spec(Province, "html", color = "#a50026", bold = "TRUE"),
+                         ifelse(Increasing/df$count > 0.75, cell_spec(Province, "html", color = "#006837", bold = "TRUE"),
+                                cell_spec(Province, "html", color = "gray20", bold = "FALSE"))),
+       Decreasing = color_bar(color = colour_dec(Decreasing, df), fun = "fraction", df)(Decreasing),
+       Increasing = color_bar(color = colour_inc(Increasing, df), fun = "fraction", df)(Increasing)
+       
+) %>% 
+  select(Province, Decreasing, Increasing) %>% 
+  
+  kable("html", escape = "F", align = c("l", "r", "l")) %>% 
+  kable_styling(bootstrap_options = c("hover", "responsive", "condensed"), full_width = F, position = "float_right") %>% 
+  add_header_above(c(" " = 1, "Number of Communities" = 2))
+
+
+
+```
+Here, I've used R to add shading, colour and bars that indicate the number of growing or shrinking cities out of all the cities in that province. I've also added a multi-row header and wrapped the text around the table as you'd see in a newspaper. The provinces and territories are grouped geographically so it's easy to spot the Maritimes and Newfoundland and Labrador in orange. But I hadn't heard anything about Saskatchewan until I made this chart. Good thing the CBC was all over [it](http://www.cbc.ca/news/canada/saskatoon/saskatchewan-small-town-population-down-1.3975025).  
+  
+Although not essential for this task, the bars and colouring are programmatic. If more than 50% of the cities in a region grew or shrunk then the colour bar gets darker. Same again at 75%. Which got me thinking about this [post](https://appsilondatascience.com/blog/rstats/2018/03/13/excel-is-obsolate.html) I read recently about Microsoft Excel and the era of big data.
+  
+I think the addition of colour and bars adds visual interest to what are traditionally dry and uninteresting tables. Still, we can't differentiate between small towns and big cities. Enter, the slope graph.
+
+This grid gives every province its own slope graph with just two dates 2001 on the left and 2016 on the right. Falling populations are indicated with thin red lines, growing ones in black. Most of the slope graphs I've seen have just a few lines. In most of the cases here there are hundreds. 
+
+I started this project thinking about Newfoundland and Labrador. Their graph, with its dense swath of red, is a powerful representation of the problems they face.  Whereas Manitoba, Alberta, and Nunavut have growing cities across a wide range of population sizes. 
+
+![](/img/prov_facet2.svg)  
+
+```{r txt, echo = FALSE, include = FALSE}
+
+# Add a fancy table formatted like Integration with formattable from
+# https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+# Link to post about Excel vs R here, https://appsilondatascience.com/blog/rstats/2018/03/13/excel-is-obsolete.html?utm_campaign=News&utm_medium=Community&utm_source=DataCamp.com
+
+library("knitr")
+library("kableExtra")
+library("tidyverse")
+
+# Rotate Text
+# str - the string to rotate
+# angle - a vector (start, stop, step). start angle, stop angle, incremental angle steps. If start, stop, step == ie 90. Fill vector with 90
+# chunk - chop into letters ir words before rotating
+#
+rotate_text <- function(str, angle, chunk) {
+  if (chunk == "letter") {
+    p_text <- unlist(strsplit(str, "")) 
+  } else {
+    p_text <- unlist(strsplit(str, " ")) 
+  }
+  
+  num_chunk <- length(p_text)
+  
+  # Make rotate vector
+  if (angle[1] == angle[2]) {
+    p_angle_long <- rep(angle[1], num_chunk) # Fixed rotation
+  } else {
+    p_angle <- seq(from = angle[1], to = angle[2], by = angle[3]) # Increasing rotation
+    num_ang <- length(p_angle)
+    p_angle_long <- rep(p_angle, ceiling(num_chunk / num_ang))  
+    
+    # Repeat the angles for the length of the string
+    p_angle_long <- p_angle_long[1:num_chunk]
+  }
+  
+  rtext1 <- text_spec(p_text, "html", angle = p_angle_long)
+  
+  if (chunk == "letter") {
+    rtext2 <- (paste0(rtext1, collapse=""))
+  } else {
+    rtext2 <- (paste0(rtext1, collapse=" "))
+  }
+}
+
+rtext0 <- rotate_text("this", c(90, 90, 90), "word")
+rtext1 <- rotate_text("why more people", c(1, 360, 10), "letter")
+rtext2 <- rotate_text("easier to read", c(180, 180, 180), "word")
+
+```
+I find these slope graphs quite pretty. Abstract art almost. Here's a larger look at beautiful [B.C.](/img/bc.svg){target="_blank"}
+
+R Markdown is pretty neat. You can do things like 
+`r rtext0`
+. I wonder
+`r rtext1`
+don't do this. It's so much
+`r rtext2`
+NOTE: Those people live [here](/img/house.jpg){target="_blank"}

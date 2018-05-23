@@ -1,0 +1,198 @@
+---
+title: Visualizing Population Change
+author: Lawrence Pilch
+date: '2018-03-31'
+slug: visualizing-population-change
+categories:
+  - Canada
+  - Visualization
+tags:
+  - Canada
+  - Visualization
+subtitle: The Slope Graph
+---
+
+
+
+<p>Every time I’ve visited Newfoundland and Labrador I’ve loved it. So, when I hear about the shrinking of small towns there my ears perk up. I thought it would be interesting to visualize the change in communities of all size across all provinces between 2001 and 2016. There are many ways to look at this, here are two. In this post I use the term “city” and “community” interchangeably.</p>
+<p>First, a table. Unlikely the first thing to come to mind when thinking data visualization, but not everything has to be New York Times quality D3 animation to enlighten.</p>
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; float: right; margin-left: 10px;">
+<thead>
+<tr>
+<th style="border-bottom:hidden" colspan="1">
+</th>
+<th style="border-bottom:hidden; padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="2">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px;">
+Number of Communities
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Province
+</th>
+<th style="text-align:right;">
+Decreasing
+</th>
+<th style="text-align:left;">
+Increasing
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">British Columbia</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 43.97%">226</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #a6d96a; width: 56.03%">288</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Alberta</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 29.34%">103</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #a6d96a; width: 70.66%">248</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Saskatchewan</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fdae61; width: 59.58%">507</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #d9ef8b; width: 40.42%">344</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: #006837;">Manitoba</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 24.52%">38</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #66bd63; width: 75.48%">117</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Ontario</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 33.26%">145</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #a6d96a; width: 66.74%">291</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Quebec</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 46.71%">482</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #a6d96a; width: 53.29%">550</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Nova Scotia</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fdae61; width: 60.47%">52</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #d9ef8b; width: 39.53%">34</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">New Brunswick</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fdae61; width: 70.36%">178</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #d9ef8b; width: 29.64%">75</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Prince Edward Island</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fdae61; width: 56.36%">62</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #d9ef8b; width: 43.64%">48</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: #a50026;">Newfoundland and Labrador</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #f46d43; width: 79.59%">273</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #d9ef8b; width: 20.41%">70</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Yukon Territories</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 32.00%">8</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #a6d96a; width: 68.00%">17</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style="     color: gray20;">Northwest Territories</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 47.83%">11</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #a6d96a; width: 52.17%">12</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: #006837;">Nunavut</span>
+</td>
+<td style="text-align:right;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #fee08b; width: 16.67%">4</span>
+</td>
+<td style="text-align:left;">
+<span style="display: inline-block; direction: rtl; border-radius: 0px; padding-right: 0px; background-color: #66bd63; width: 83.33%">20</span>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Here, I’ve used R to add shading, colour and bars that indicate the number of growing or shrinking cities out of all the cities in that province. I’ve also added a multi-row header and wrapped the text around the table as you’d see in a newspaper. The provinces and territories are grouped geographically so it’s easy to spot the Maritimes and Newfoundland and Labrador in orange. But I hadn’t heard anything about Saskatchewan until I made this chart. Good thing the CBC was all over <a href="http://www.cbc.ca/news/canada/saskatoon/saskatchewan-small-town-population-down-1.3975025">it</a>.</p>
+<p>Although not essential for this task, the bars and colouring are programmatic. If more than 50% of the cities in a region grew or shrunk then the colour bar gets darker. Same again at 75%. Which got me thinking about this <a href="https://appsilondatascience.com/blog/rstats/2018/03/13/excel-is-obsolate.html">post</a> I read recently about Microsoft Excel and the era of big data.</p>
+<p>I think the addition of colour and bars adds visual interest to what are traditionally dry and uninteresting tables. Still, we can’t differentiate between small towns and big cities. Enter, the slope graph.</p>
+<p>This grid gives every province its own slope graph with just two dates 2001 on the left and 2016 on the right. Falling populations are indicated with thin red lines, growing ones in black. Most of the slope graphs I’ve seen have just a few lines. In most of the cases here there are hundreds.</p>
+<p>I started this project thinking about Newfoundland and Labrador. Their graph, with its dense swath of red, is a powerful representation of the problems they face. Whereas Manitoba, Alberta, and Nunavut have growing cities across a wide range of population sizes.</p>
+<div class="figure">
+<img src="/img/prov_facet2.svg" />
+
+</div>
+<p>I find these slope graphs quite pretty. Abstract art almost. Here’s a larger look at beautiful <a href="/img/bc.svg" target="_blank">B.C.</a></p>
+<p>R Markdown is pretty neat. You can do things like <span style="-webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); display: inline-block; "><span style="     TRUE">this</span></span> . I wonder <span style="-webkit-transform: rotate(1deg); -moz-transform: rotate(1deg); -ms-transform: rotate(1deg); -o-transform: rotate(1deg); transform: rotate(1deg); display: inline-block; "><span style="     TRUE">w</span></span><span style="-webkit-transform: rotate(11deg); -moz-transform: rotate(11deg); -ms-transform: rotate(11deg); -o-transform: rotate(11deg); transform: rotate(11deg); display: inline-block; "><span style="     TRUE">h</span></span><span style="-webkit-transform: rotate(21deg); -moz-transform: rotate(21deg); -ms-transform: rotate(21deg); -o-transform: rotate(21deg); transform: rotate(21deg); display: inline-block; "><span style="     TRUE">y</span></span><span style="-webkit-transform: rotate(31deg); -moz-transform: rotate(31deg); -ms-transform: rotate(31deg); -o-transform: rotate(31deg); transform: rotate(31deg); display: inline-block; "><span style="     TRUE"> </span></span><span style="-webkit-transform: rotate(41deg); -moz-transform: rotate(41deg); -ms-transform: rotate(41deg); -o-transform: rotate(41deg); transform: rotate(41deg); display: inline-block; "><span style="     TRUE">m</span></span><span style="-webkit-transform: rotate(51deg); -moz-transform: rotate(51deg); -ms-transform: rotate(51deg); -o-transform: rotate(51deg); transform: rotate(51deg); display: inline-block; "><span style="     TRUE">o</span></span><span style="-webkit-transform: rotate(61deg); -moz-transform: rotate(61deg); -ms-transform: rotate(61deg); -o-transform: rotate(61deg); transform: rotate(61deg); display: inline-block; "><span style="     TRUE">r</span></span><span style="-webkit-transform: rotate(71deg); -moz-transform: rotate(71deg); -ms-transform: rotate(71deg); -o-transform: rotate(71deg); transform: rotate(71deg); display: inline-block; "><span style="     TRUE">e</span></span><span style="-webkit-transform: rotate(81deg); -moz-transform: rotate(81deg); -ms-transform: rotate(81deg); -o-transform: rotate(81deg); transform: rotate(81deg); display: inline-block; "><span style="     TRUE"> </span></span><span style="-webkit-transform: rotate(91deg); -moz-transform: rotate(91deg); -ms-transform: rotate(91deg); -o-transform: rotate(91deg); transform: rotate(91deg); display: inline-block; "><span style="     TRUE">p</span></span><span style="-webkit-transform: rotate(101deg); -moz-transform: rotate(101deg); -ms-transform: rotate(101deg); -o-transform: rotate(101deg); transform: rotate(101deg); display: inline-block; "><span style="     TRUE">e</span></span><span style="-webkit-transform: rotate(111deg); -moz-transform: rotate(111deg); -ms-transform: rotate(111deg); -o-transform: rotate(111deg); transform: rotate(111deg); display: inline-block; "><span style="     TRUE">o</span></span><span style="-webkit-transform: rotate(121deg); -moz-transform: rotate(121deg); -ms-transform: rotate(121deg); -o-transform: rotate(121deg); transform: rotate(121deg); display: inline-block; "><span style="     TRUE">p</span></span><span style="-webkit-transform: rotate(131deg); -moz-transform: rotate(131deg); -ms-transform: rotate(131deg); -o-transform: rotate(131deg); transform: rotate(131deg); display: inline-block; "><span style="     TRUE">l</span></span><span style="-webkit-transform: rotate(141deg); -moz-transform: rotate(141deg); -ms-transform: rotate(141deg); -o-transform: rotate(141deg); transform: rotate(141deg); display: inline-block; "><span style="     TRUE">e</span></span> don’t do this. It’s so much <span style="-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); display: inline-block; "><span style="     TRUE">easier</span></span> <span style="-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); display: inline-block; "><span style="     TRUE">to</span></span> <span style="-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); display: inline-block; "><span style="     TRUE">read</span></span> NOTE: Those people live <a href="/img/house.jpg" target="_blank">here</a></p>

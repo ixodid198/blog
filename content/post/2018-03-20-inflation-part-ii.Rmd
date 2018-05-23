@@ -1,0 +1,22 @@
+---
+title: Inflation - Part II
+author: Lawrence Pilch
+date: '2018-03-20'
+slug: inflation-part-ii
+categories:
+  - Economics
+  - Toronto
+  - Visualization
+tags:
+  - Economics
+  - Toronto
+  - Visualization
+subtitle: ...The Cost of Living in Toronto
+---
+
+What if we added the median home price of just detached homes in Toronto? This was tough data to get so I only have data for the start and end dates.
+![](/img/inf2.svg)  
+Since detached homes, as a group, are generally more expensive than other types of homes I wondered whether the rate of appreciation of a home had to do with its cost. Do more expensive homes appreciate faster?
+  
+  This plot looks at median, detached home prices in different areas of central Toronto. The blue/green lines represent less expensive homes while the red/orange/lines more expensive. One caveat first. The Toronto Real Estate Board tweaks the boundaries of the regions in some years. Still, it's not every year and there is always substantial overlap. What strikes me is that some regions are essentially flat whereas some are on a tear. A rising tide doesn't appear to lift all boats. This fits with the earlier chart showing stagnant median wages. It's hard to have a bidding war over a home if you can't pay for it.
+![](/img/cxx.svg)  

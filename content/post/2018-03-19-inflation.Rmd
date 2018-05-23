@@ -1,0 +1,56 @@
+---
+title: Inflation - Part I
+author: Lawrence Pilch
+date: '2018-03-19'
+slug: inflation
+categories:
+  - Economics
+  - Toronto
+  - Visualization
+tags:
+  - Economics
+  - Toronto
+  - Visualization
+subtitle: The Cost of Living in Toronto...  
+---
+I've always loved the stories a good plot could tell, so I decided to learn more about data visualization and R. R is a funny name for a handy language that's designed to deal with data. (Aside: R evolved from S which came from Bell Labs in the 70s which is further evidence that everything was invented in Bell Labs in the 70s.)   
+  
+For a first try, I thought I'd plot a simple time-series of inflation-adjusted prices of things in my city. Here's what I learned:
+  
+![](/img/inf1.svg)  
+
+### Wages
+No surprise that median family income is flat as a pancake. The minimum wage did keep pace with inflation, though that says nothing about its absolute level.
+
+### Homes 
+It's easy to forget today, but home prices do indeed go down---a lot and for long periods. I thought home prices would crush everything else. The fact that they didn't is a function of how much averages can hide. These numbers reflect all home types across all areas of the city. More on this later.
+
+### TTC
+The Toronto Transit Commission (TTC) operates public transportation in the city. After their massive increase of the adult cash fare in the early 90s it's been a slow and steady rise.
+
+### Toronto Star
+From 1990 to about 2005 the Star just kept pace with inflation. After that, price increases were greater than they had been in the past.
+
+### Air Travel
+This isn't shown on this plot, but I thought it was interesting. A big part of what to study comes from what data is available. Statistics Canada tracks base air fares from Toronto, so I thought that would be good to look at as well. According to Statistics Canada, the average base fare out of Toronto, adjusted for inflation costs 40% *less* in 2015 than in 1990. What?! That has certainly not been my experience. Or yours. It has to do with what is meant by a "base"" fare. You'd think a table called, "Average domestic fares for Canada and ten major cities" would be about the price to fly. But you'd be wrong. It's the price to fly, *not including taxes and fees*. That's like measuring inflation, not including inflation. I thought the high cost of air travel in Canada was caused by a lack of competition. Clearly, that's not the whole story. Here's what gets tacked on to the base fare:
+
+Fee | Explanation
+------------------------------------- | ----------------------------------------------------------
+Federal and provincial fuel taxes | British Columbia eliminated its international fuel tax in 2012, joining New Brunswick, Alberta, Quebec and Saskatchewan
+Airport Rent | Airports pay rent to the federal government for the use of Crown land
+Air Travellers Security Charge | Cost of screening passengers and baggage
+NAV Canada | NAV Canada recovers the costs from airlines of providing air navigation services 
+Airport Improvement Fees | Primarily funds airport infrastructure projects
+Federal and provincial fuel taxes | British Columbia eliminated its international fuel tax in 2012, joining New Brunswick, Alberta, Quebec and Saskatchewan
+Payments in Lieu of Taxes | Cities hosting federal properties can apply for payments in lieu of taxes
+Harmonized Sales Tax (HST) | Tax is applied to some of the taxes above.
+    
+    
+
+
+
+
+
+
+
+

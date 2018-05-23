@@ -1,0 +1,56 @@
+{{ if .Site.Params.googlefonts }}
+  <link rel="stylesheet" href="{{ .Site.Params.googlefonts }}" type="text/css" media="all" /> 
+{{ end }}
+
+<style>
+  /*Main Page*/
+  .navbar-custom .navbar-brand {
+    color: rgb(250, 0, 0);
+  }
+  .navbar-custom .navbar-brand:hover {
+    color: rgb(0, 255, 0);
+
+  }
+  .navbar-custom .nav li a {
+    color: darkgoldenrod;
+  }
+  .navbar-custom .nav li a:hover {
+    color: rgb(0,0,255);
+  }
+  .intro-header .page-heading h1 {
+    color: rgb(40, 40, 40);
+    font-family: Lato;
+    font-size: 60px;
+    font-weight: bold;
+  }
+  .post-preview .post-title {
+    color: rgb(40, 40, 40);
+    font-family: Lato;
+  }
+  .post-preview .post-subtitle {
+    color: red;
+  }
+/*
+  .post-preview .post-entry {
+    color: coral;
+  }
+*/
+  .post-preview .post-read-more {
+    color: chartreuse;
+  }
+  .post-preview a:focus, .post-preview a:hover {
+    color: rgb(255,0,0);
+  }
+  
+  p {
+    font-family: Lora;
+    color: black;
+  }
+  /*Post Itself*/
+  .post-heading h1 {
+    color: #ed8383;
+  }
+  .blog-post p {
+    font-family: Itim;
+  }
+</style>

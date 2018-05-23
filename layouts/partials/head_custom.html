@@ -10,11 +10,24 @@
     font-weight: 700;
     color: rgb(40, 40, 40);
   }
-   h2.post-title {                    /*  Post title */
+  .intro-header .post-heading h1 {    /*  Blog post title - post page */
+    font-family: 'Lato';
+    font-size: 60px;
+    font-weight: 700;
+    color: rgb(40, 40, 40);
+  }
+   .post-read-more {                 /*  [Read More] main page */
+    font-family: 'Lato';
+  }  
+  h2.post-title {                    /*  Post title */
     font-family: 'Lato';
     color: rgb(40, 40, 40);
   }
-  h3#my-history {                     /* h3 title used in About */
+  h3 {                               /*  Subtitles in post */
+    font-family: 'Lato';
+    color: rgb(40, 40, 40);
+  }
+  h3#my-history {                     /*    h3 title used in About */
     font-family: 'Lato';
     color: rgb(40, 40, 40);
   }
@@ -44,7 +57,27 @@
     font-weight: 400;
     color: rgb(100, 100, 100); ;
   }
-  
+  .post-preview a:focus, .post-preview a:hover {  /* Hover over post title/sub-title - only subtitle changes */
+    color: rgb(128, 0, 0);
+  }
+  .container-fluid .navbar-brand:hover {          /* Hover menu left */
+    color: rgb(128, 0, 0);
+  }
+  .navbar-custom .nav li a:hover {                /* Hover menu right */
+    color: rgb(128, 0, 0);
+  }
+  .pager li a {                                   /* PREVIOUS/NEXT POST */
+    font-family: 'Lato';
+    color: rgb(40, 40, 40);
+  }
+  table tr th {                                   /* Table headers */
+    font-family: 'Lato';
+    color: rgb(40, 40, 40);
+  }
+  .well {                   /* Remove borders at top of image on main page. See content/_index.md */
+    padding: 0px;
+    border: 0px;
+  }
 </style>
 
 <!--

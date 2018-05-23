@@ -1,0 +1,90 @@
+---
+title: Inflation - Part I
+author: Lawrence Pilch
+date: '2018-03-19'
+slug: inflation
+categories:
+  - Economics
+  - Toronto
+  - Visualization
+tags:
+  - Economics
+  - Toronto
+  - Visualization
+subtitle: The Cost of Living in Toronto...  
+---
+
+
+
+<p>I’ve always loved the stories a good plot could tell, so I decided to learn more about data visualization and R. R is a funny name for a handy language that’s designed to deal with data. (Aside: R evolved from S which came from Bell Labs in the 70s which is further evidence that everything was invented in Bell Labs in the 70s.)</p>
+<p>For a first try, I thought I’d plot a simple time-series of inflation-adjusted prices of things in my city. Here’s what I learned:</p>
+<div class="figure">
+<img src="/img/inf1.svg" />
+
+</div>
+<div id="wages" class="section level3">
+<h3>Wages</h3>
+<p>No surprise that median family income is flat as a pancake. The minimum wage did keep pace with inflation, though that says nothing about its absolute level.</p>
+</div>
+<div id="homes" class="section level3">
+<h3>Homes</h3>
+<p>It’s easy to forget today, but home prices do indeed go down—a lot and for long periods. I thought home prices would crush everything else. The fact that they didn’t is a function of how much averages can hide. These numbers reflect all home types across all areas of the city. More on this later.</p>
+</div>
+<div id="ttc" class="section level3">
+<h3>TTC</h3>
+<p>The Toronto Transit Commission (TTC) operates public transportation in the city. After their massive increase of the adult cash fare in the early 90s it’s been a slow and steady rise.</p>
+</div>
+<div id="toronto-star" class="section level3">
+<h3>Toronto Star</h3>
+<p>From 1990 to about 2005 the Star just kept pace with inflation. After that, price increases were greater than they had been in the past.</p>
+</div>
+<div id="air-travel" class="section level3">
+<h3>Air Travel</h3>
+<p>This isn’t shown on this plot, but I thought it was interesting. A big part of what to study comes from what data is available. Statistics Canada tracks base air fares from Toronto, so I thought that would be good to look at as well. According to Statistics Canada, the average base fare out of Toronto, adjusted for inflation costs 40% <em>less</em> in 2015 than in 1990. What?! That has certainly not been my experience. Or yours. It has to do with what is meant by a “base”&quot; fare. You’d think a table called, “Average domestic fares for Canada and ten major cities” would be about the price to fly. But you’d be wrong. It’s the price to fly, <em>not including taxes and fees</em>. That’s like measuring inflation, not including inflation. I thought the high cost of air travel in Canada was caused by a lack of competition. Clearly, that’s not the whole story. Here’s what gets tacked on to the base fare:</p>
+<table>
+<colgroup>
+<col width="39%" />
+<col width="60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Fee</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Federal and provincial fuel taxes</td>
+<td>British Columbia eliminated its international fuel tax in 2012, joining New Brunswick, Alberta, Quebec and Saskatchewan</td>
+</tr>
+<tr class="even">
+<td>Airport Rent</td>
+<td>Airports pay rent to the federal government for the use of Crown land</td>
+</tr>
+<tr class="odd">
+<td>Air Travellers Security Charge</td>
+<td>Cost of screening passengers and baggage</td>
+</tr>
+<tr class="even">
+<td>NAV Canada</td>
+<td>NAV Canada recovers the costs from airlines of providing air navigation services</td>
+</tr>
+<tr class="odd">
+<td>Airport Improvement Fees</td>
+<td>Primarily funds airport infrastructure projects</td>
+</tr>
+<tr class="even">
+<td>Federal and provincial fuel taxes</td>
+<td>British Columbia eliminated its international fuel tax in 2012, joining New Brunswick, Alberta, Quebec and Saskatchewan</td>
+</tr>
+<tr class="odd">
+<td>Payments in Lieu of Taxes</td>
+<td>Cities hosting federal properties can apply for payments in lieu of taxes</td>
+</tr>
+<tr class="even">
+<td>Harmonized Sales Tax (HST)</td>
+<td>Tax is applied to some of the taxes above.</td>
+</tr>
+</tbody>
+</table>
+</div>

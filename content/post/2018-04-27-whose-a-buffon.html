@@ -1,0 +1,19 @@
+---
+title: Whose a Buffon?
+author: Lawrence Pilch
+date: '2018-04-27'
+slug: whose-a-buffon
+categories:
+  - Visualization
+  - Mathematics
+tags:
+  - Visualization
+  - Mathematics
+subtitle: Estimating Pi
+---
+
+
+
+<p>I wanted to try a simple interactive visualization using RStudio’s Shiny package and thought Buffon’s needle problem would work well. Around 1732, Georges-Louis Leclerc, Comte de Buffon, a French mathematician, first posed and solved the question that essentially boils down to asking what is the probability that a needle dropped on a floor of parallel lines crosses a line? He discovered that if the length of the needle is less than or equal to the width of the lines the probability is:</p>
+<p><span class="math display">\[\frac{2 * Needle_{length}}{Line_{width} * \pi}\]</span></p>
+<p>No circles in sight and yet <span class="math inline">\(\pi\)</span> pops up again. With Buffon’s relationship I can approximate <span class="math inline">\(\pi\)</span> by simulating the dropping of needles on to a floor with evenly spaced parallel lines. Mathematicians being mathematicians have also calculated what happens if the needle is long, bent, circular or even shaped like wet spaghetti. If interested, you may begin your journey <a href="http://datagenetics.com/blog/may42015/index.html">here</a>. It’s not a great way to estimate <span class="math inline">\(\pi\)</span> because the solution converges to pi very slowly. Have a <a href="https://ixodid.shinyapps.io/needle_shiny_functions/">look</a>.</p>
