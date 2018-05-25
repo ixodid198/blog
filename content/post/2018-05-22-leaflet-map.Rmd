@@ -140,6 +140,7 @@ map <- leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14), width = "10
               color = "white",
               dashArray = "0",
               fillOpacity = 1.0,
+              options = list(zIndex = 200),
 
               # Highlight neighbourhoods upon mouseover
               highlight = highlightOptions(
@@ -176,6 +177,7 @@ map <- leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14), width = "10
               color = "green",
               weight = 1.0,
               opacity = 1.0,
+              options = list(zIndex = 100),
               fillOpacity = 1.0) %>%
  
   # Add legend
