@@ -24,23 +24,22 @@ library(tidyverse)
 library(ggmap)
 library(viridis)
 library(sf)
-
 library(tmap)
 library(leaflet)
+library(htmltools)
 
-# Read toronto police crime data (2014-2017)
+# Read toronto police crime data 2014 - 2017
 df <- read_csv("/Users/law/Dropbox/R/to_crime/data/MCI_2014_to_2017.csv")
 be <- filter(df, MCI == "Break and Enter")
 
 # Read neighbourhood shapefile
 hood_shp <- st_read("/Users/law/Dropbox/R/to_crime/data/neighbourhoods_wgs84/NEIGHBORHOODS_WGS84.shp", quiet = TRUE)
 
-# Read neighbourhood pop'n data
+# Read neighbourhood population data
 hood_pop <- read_csv("/Users/law/Dropbox/R/to_crime/data/hood_pop.csv") 
 
 # Read street data. TO streets, rivers, walkways, boundaries, highways
 rd <- st_read("/Users/law/Dropbox/R/to_crime/data/centreline_wgs84/CENTRELINE_WGS84.shp", quiet = TRUE) 
-
 # Read park data
 parks <-  st_read("/Users/law/Dropbox/R/to_crime/data/city_green_space_wgs84/CITY_GREEN_SPACE_WGS84.shp", quiet = TRUE)
 
@@ -55,10 +54,8 @@ rd_desc_df <- st_set_geometry(rd_desc, NULL)
 # Look at highways
 xway <- filter(rd_desc, FCODE_DESC == "Expressway")
 
-
 # Look at major arterial
 mart <- filter(rd_desc, FCODE_DESC == "Major Arterial")
-
 
 # Add up number of B&Es in each neighbourhood
 hood <- be %>% 
@@ -109,6 +106,7 @@ hood_shp <- mutate(hood_shp, times_avg = round(density / be_avg, digits = 1))
 # Interactive using Leaflet - multi-layer
 #-------------------------------------------------------------------------------------------
 
+
 # Text and formatting for mouseover
 labels <- sprintf("<strong>%s</strong><br/>
                   Rank: %.0f, %.1fX Average",
@@ -117,32 +115,47 @@ labels <- sprintf("<strong>%s</strong><br/>
                   hood_shp$times_avg
 ) %>% lapply(htmltools::HTML)
 
-map <- leaflet(options = leafletOptions(minZoom = 11, maxZoom = 13))
-
+# Color scheme for neighbourhoods
 pal <- colorBin("YlOrRd", domain = hood_shp$be_per_cap, bins = 8, pretty = TRUE)
 
-# Add neighbourhoods
-map %>% addPolygons(data = hood_shp,
-  fillColor = ~pal(be_per_cap),
-  weight = 1,
-  opacity = 1,
-  color = "white",
-  dashArray = "3",
-  fillOpacity = 0.7,
+
+# Add interactive map ---------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+map <- leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14), width = "100%") %>% 
+  addTiles() %>% 
   
-  highlight = highlightOptions(
-    weight = 3,
-    color = "white",
-    dashArray = "",
-    fillOpacity = 0.7,
-    bringToFront = TRUE,
-    sendToBack = TRUE),
+  # Raster image surrounding Toronto
+  addProviderTiles(providers$CartoDB.Positron) %>% 
   
-  label = labels,
-  labelOptions = labelOptions(
-    style = list("font-weight" = "normal", padding = "3px 8px"),
-    textsize = "15px",
-    direction = "auto")) %>% 
+  # Center map north of Toronto City Hall slightly zoomed in
+  setView(lng = -79.384293, 
+          lat = 43.685, #43.653908, 
+          zoom = 12) %>% 
+
+  # Vector neighbourhoods
+  addPolygons(data = hood_shp, 
+              fillColor = ~pal(be_per_cap),
+              weight = 2,
+              opacity = 1,
+              color = "white",
+              dashArray = "0",
+              fillOpacity = 1.0,
+
+              # Highlight neighbourhoods upon mouseover
+              highlight = highlightOptions(
+              weight = 3,
+              color = "white",
+              dashArray = "",
+              fillOpacity = 0.7,
+              bringToFront = TRUE,
+              sendToBack = TRUE), # Upon mouseout, returns colors to as they were before
+
+              # Add label info when mouseover
+              label = labels,
+              labelOptions = labelOptions(
+              style = list("font-weight" = "normal", padding = "3px 8px"),
+              textsize = "15px",
+              direction = "auto")) %>% 
   
   # Add highways
   addPolygons(data = xway,
@@ -154,7 +167,7 @@ map %>% addPolygons(data = hood_shp,
   # Add major arterial
   addPolygons(data = mart,
               color = "#737373", 
-              weight = 1.0, 
+              weight = 2.0, 
               opacity = 0.5, 
               fillOpacity = 1.0) %>% 
   
@@ -164,11 +177,14 @@ map %>% addPolygons(data = hood_shp,
               weight = 1.0,
               opacity = 1.0,
               fillOpacity = 1.0) %>%
-  
-  addLegend(data = hood_shp,
-            pal = pal, 
-            values = ~density, 
-            opacity = 0.7, title = "Break and Enter / Capita",
+ 
+  # Add legend
+  addLegend(data = hood_shp, 
+            colors =c("#FEFDB7", "#F4AE7E", "#AA122E"),
+            labels= c("Less", "", "More"),
+            opacity = 1.0, 
+            title = "B&E / Capita",
             position = "bottomright")
 
+map
 
