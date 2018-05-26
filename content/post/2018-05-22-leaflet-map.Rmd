@@ -121,8 +121,24 @@ pal <- colorBin("YlOrRd", domain = hood_shp$be_per_cap, bins = 8, pretty = TRUE)
 
 # Add interactive map ---------------------------------------------------------------------
 # -----------------------------------------------------------------------------------------
-map <- leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14), width = "100%") %>% 
-  addTiles() %>% 
+# Text and formatting for mouseover
+labels <- sprintf("<strong>%s</strong><br/>
+                  Rank: %.0f, %.1fX Average",
+                  hood_shp$Hood_Name, 
+                  hood_shp$rank, 
+                  hood_shp$times_avg
+) %>% lapply(htmltools::HTML)
+
+# Color scheme for neighbourhoods
+pal <- colorBin("YlOrRd", domain = hood_shp$be_per_cap, bins = 8, pretty = TRUE)
+
+# Need to separate the borders from the fill since I need them on different layers
+borders = hood_shp %>%
+  st_cast("MULTILINESTRING")
+
+# create a map with individual layer ordering using addMapPane
+leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14), width = "100%") %>%
+  addTiles() %>%
   
   # Raster image surrounding Toronto
   addProviderTiles(providers$CartoDB.Positron) %>% 
@@ -131,62 +147,66 @@ map <- leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14), width = "10
   setView(lng = -79.384293, 
           lat = 43.685, #43.653908, 
           zoom = 12) %>% 
-
-  # Vector neighbourhoods
-  addPolygons(data = hood_shp, 
-              fillColor = ~pal(be_per_cap),
-              weight = 2,
-              opacity = 1,
-              color = "white",
-              dashArray = "0",
-              fillOpacity = 1.0,
-              options = list(zIndex = 200),
-
-              # Highlight neighbourhoods upon mouseover
-              highlight = highlightOptions(
-              weight = 3,
-              color = "white",
-              dashArray = "",
-              fillOpacity = 0.7,
-              bringToFront = TRUE,
-              sendToBack = TRUE), # Upon mouseout, returns colors to as they were before
-
-              # Add label info when mouseover
-              label = labels,
-              labelOptions = labelOptions(
-              style = list("font-weight" = "normal", padding = "3px 8px"),
-              textsize = "15px",
-              direction = "auto")) %>% 
   
+  addMapPane("hood_borders", zIndex = 430) %>%
+  addMapPane("roads", zIndex = 425) %>% 
+  addMapPane("parks", zIndex = 420) %>% 
+  addMapPane("hoods", zIndex = 410) %>%
+ 
+  # Add hood borders
+  addPolylines(data = borders, 
+               color = "white",
+               opacity = 1, 
+               weight = 2,
+               options = pathOptions(pane = "hood_borders")) %>% 
+ 
   # Add highways
   addPolygons(data = xway,
-              color = "sienna", 
-              weight = 1.0, 
-              opacity = 1.0, 
-              fillOpacity = 0.7) %>% 
-  
+              color = "sienna",
+              weight = 1.0,
+              opacity = 1.0,
+              fillOpacity = 0.7,
+              options = pathOptions(pane = "roads")) %>%
+
   # Add major arterial
   addPolygons(data = mart,
-              color = "#737373", 
-              weight = 2.0, 
-              opacity = 0.5, 
-              fillOpacity = 1.0) %>% 
-  
+              color = "#737373",
+              weight = 2.0,
+              opacity = 0.5,
+              fillOpacity = 1.0,
+              options = pathOptions(pane = "roads")) %>%
+
   # Add parks
   addPolygons(data = parks,
               color = "green",
               weight = 1.0,
               opacity = 1.0,
-              options = list(zIndex = 100),
-              fillOpacity = 1.0) %>%
- 
+              fillOpacity = 1.0,
+              options = pathOptions(pane = "parks")) %>% 
+  
+  # Add hood fill
+  addPolygons(data = hood_shp,
+              fillColor = ~pal(be_per_cap),
+              fillOpacity = 1.0,
+              color = NA,
+              options = pathOptions(pane = "hoods",
+                                    
+              # Highlight neighbourhoods upon mouseover
+              highlight = highlightOptions(
+                          stroke = 4),
+              
+              # Add label info when mouseover
+              label = labels,
+              labelOptions = labelOptions(
+                style = list("font-weight" = "normal", padding = "3px 8px"),
+                textsize = "15px",
+                direction = "auto"))) %>% 
+  
   # Add legend
   addLegend(data = hood_shp, 
-            colors =c("#FEFDB7", "#F4AE7E", "#AA122E"),
-            labels= c("Less", "", "More"),
+            colors =c("#AA122E", "#F4AE7E", "#FEFDB7"),
+            labels= c("More", "", "Less"),
             opacity = 1.0, 
-            title = "B&E / Capita",
+            title = "B&Es",
             position = "bottomright")
-
-map
 
