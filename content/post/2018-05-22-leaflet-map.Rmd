@@ -193,7 +193,8 @@ leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14), width = "100%") %>
                                     
               # Highlight neighbourhoods upon mouseover
               highlight = highlightOptions(
-                          stroke = 4),
+                          color = "white",
+                          weight = 4),
               
               # Add label info when mouseover
               label = labels,
