@@ -13,4 +13,4 @@ subtitle: ''
 ---
 The city of Toronto has a large database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto. I thiught it would be fun to see these using Flourish's latest treemap template.
 
-<iframe src="https://public.flourish.studio/visualisation/56290/"  width="800" height="500"></iframe>
+<div class="flourish-embed" data-src="visualisation/56290"></div><script src="https://public.flourish.studio/resources/embed.js"></script>
