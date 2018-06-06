@@ -16,8 +16,13 @@ subtitle: ''
 
 
 <p>The city of Toronto has a large (&gt; 567,000) database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto, which is about one quarter of all the tree species in North America. However tropical forests win the diversity crown with tens of thousands of species.</p>
-<p>Usually when you start to look at a dataset a histogram is a good idea. A quick one in R reveals:</p>
-<p>But I want to see the tree types so I tried a scrolling table with proportional colour bars:</p>
+<p>Usually when you start to look at a new dataset its a good idea to look at its overall structure. A quick bar chart in R reveals:</p>
+<div class="figure">
+<img src="/img/to_trees_histogram.svg" />
+
+</div>
+<p>Two things stand out for me. One is the long tail distribution and the other is the most common tree with over three times the number of the next most tree. This is the non-native Norway Maple that was planted in the mid 20th century to fill in the gaps left by the elm trees destroyed by Dutch Elm Disease. It turned out to be a bad <a href="https://www.theglobeandmail.com/news/toronto/problem-trees-three-types-of-trees-creating-headaches-for-city-of-torontostaff/article31295397/">replacement</a>.</p>
+<p>But I want to see the individual tree types so I tried a scrolling table with proportional colour bars:</p>
 <div style="border: 0px solid #ddd; padding: 10px; overflow-y: scroll; height: 500px; overflow-x: scroll; width:100%; ">
 <table class="table table-hover table-responsive table-condensed" style="width: auto !important; float: left; margin-right: 10px;">
 <thead>
@@ -2743,8 +2748,10 @@ Number
 </tbody>
 </table>
 </div>
-<p>Then I saw that Fluorish published a treemap template. Getting the data ready for this type of hierarchical structure led me to Botany 101. Scientific names of trees have a hierarchical structure part of which includes Family &gt; Genus &gt; Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create dynamic visualizations with Flourish. In the treemap, the size of each rectangle is proportional to the number of those trees in the city’s tree database.</p>
+<p>It’s a little scrolly, but the names are clear and I like the colour bars. But there is no sense of relationships between the trees.</p>
+<p>Then I saw that <a href="https://flourish.studio/">Fluorish</a> published a treemap template. This requires a hierarchical structure, which is handy since the scientific names of trees have a hierarchical structure. Part of this name hierarchy includes Family &gt; Genus &gt; Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create a dynamic visualization with Flourish. In the treemap, the size of each rectangle is proportional to the number of that tree species in Toronto’s tree database.</p>
 <div class="flourish-embed" data-src="visualisation/56816">
 
 </div>
 <script src="https://public.flourish.studio/resources/embed.js"></script>
+<p>The animation is fun and informative. Some of the less common trees have unreadably small fonts which just goes to show that it’s rarely the case that one type of visualization can do everything.</p>
