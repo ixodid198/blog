@@ -12,10 +12,14 @@ tags:
 subtitle: ''
 ---
 
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
 
 
-<p>The city of Toronto has a large database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto. I thiught it would be fun to see these using Flourish’s latest treemap template.</p>
-<div class="flourish-embed" data-src="visualisation/56290">
+<p>The city of Toronto has a large (&gt; 567,000) database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto, which is about one quarter of all the tree species in North America. However tropical forests win the diversity crown with tens of thousands of species.</p>
+<p>Usually when you start to look at a dataset a histogram is a good idea. A quick one in R reveals:</p>
+<p>But I want to see the tree types so I tried a scrolling table with proportional colour bars:</p>
+<p>Then I saw that Fluorish published a treemap template. Getting the data ready for this type of hierarchical structure led me to Botany 101. Scientific names of trees have a hierarchical structure part of which includes Family &gt; Genus &gt; Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create dynamic visualizations with Flourish. In the treemap, the size of each rectangle is in proportion to the number of those trees in the city’s tree database.</p>
+<div class="flourish-embed" data-src="visualisation/56816">
 
 </div>
 <script src="https://public.flourish.studio/resources/embed.js"></script>

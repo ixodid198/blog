@@ -11,6 +11,76 @@ tags:
   - Visualization
 subtitle: ''
 ---
-The city of Toronto has a large database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto. I thiught it would be fun to see these using Flourish's latest treemap template.
+The city of Toronto has a large (> 567,000) database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto, which is about one quarter of all the tree species in North America. However tropical forests win the diversity crown with tens of thousands of species.
 
-<div class="flourish-embed" data-src="visualisation/56290"></div><script src="https://public.flourish.studio/resources/embed.js"></script>
+Usually when you start to look at a dataset a histogram is a good idea. A quick one in R reveals:
+
+But I want to see the tree types so I tried a scrolling table with proportional colour bars:
+
+```{r txt, echo = FALSE, include = FALSE}
+library(tidyverse)
+library(stringr)
+library(sf)
+library(knitr)
+library(kableExtra)
+library(formattable)
+
+# My version of color_bar with square bars
+# Remove commas from the data with gsub so it can calculate the correct width
+color_bar <- function (color = "#49CA69", fun = "proportion", ...) 
+{
+  fun <- match.fun(fun)
+  formatter("span", style = function(x) style(display = "inline-block", 
+                                              `border-radius` = "0px", `padding-right` = "0px", 
+                                              `background-color` = csscolor(color), 
+                                              width = percent(fun(as.numeric(gsub(",", "", x)), ...))))
+}
+
+
+
+# Read tree data
+tree <-  st_read("/Users/law/Dropbox/R/to_crime/data/StreetTree_WGS84_April_2016/TMMS_Open_Data_WGS84.shp", quiet = TRUE)
+
+# Remove tree rows where geometry has weird "e" character
+eez <- str_detect(tree$geometry, "e")
+good_trees <- !eez
+tree_clean <- tree[good_trees, ]
+
+# Remove geometry
+tree_clean <- st_set_geometry(tree_clean, NULL)
+
+# Rename columns, add rank, sort by descending 
+tree_summary <- tree_clean %>%  mutate(COMMON_NAM = str_to_title(COMMON_NAM)) %>% 
+  rename("disp" = COMMON_NAM)
+
+# Number of each species
+tree_list <- tree_summary %>% 
+  group_by(disp) %>% 
+  summarize(count = n()) %>% 
+  arrange(desc(count)) %>% 
+  mutate(Rank = row_number()) %>% 
+  rename(Number = count)
+
+
+# Reorder columns
+tree_list <- select(tree_list, Rank, disp, Number)
+
+# Add color bars. Add commas to the data. (See color_bar)
+tree_list %>% 
+  mutate(
+    disp = cell_spec(disp, "html", color = "black"),
+    Number = color_bar()(format(Number, big.mark = ","))) %>% 
+  
+  rename("Common Tree Name" = disp) %>%
+  kable("html", escape = F,  align = c("l", "l")) %>%
+  kable_styling(bootstrap_options = c("hover", "responsive", "condensed"), full_width = F, position = "float_left")  %>%
+  column_spec(3, width = "10cm") %>% 
+  scroll_box(width = "100%", 
+             height = " 500px",
+             box_css = "border: 0px solid #ddd; padding: 10px; ") 
+
+```
+
+Then I saw that Fluorish published a treemap template. Getting the data ready for this type of hierarchical structure led me to Botany 101. Scientific names of trees have a hierarchical structure part of which includes Family > Genus > Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create dynamic visualizations with Flourish.  In the treemap, the size of each rectangle is in proportion to the number of those trees in the city's tree database.
+
+<div class="flourish-embed" data-src="visualisation/56816"></div><script src="https://public.flourish.studio/resources/embed.js"></script>
