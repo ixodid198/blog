@@ -1,8 +1,8 @@
 ---
-title: Flourish Test - TO Trees
+title: Tree Taxonomy in Toronto
 author: Lawrence Pilch
 date: '2018-06-04'
-slug: flourish-test-to-trees
+slug: tree-taxonomy-in-toronto
 categories:
   - Toronto
   - Visualization
@@ -17,7 +17,7 @@ Usually when you start to look at a dataset a histogram is a good idea. A quick 
 
 But I want to see the tree types so I tried a scrolling table with proportional colour bars:
 
-```{r txt, echo = FALSE, include = FALSE}
+```{r txt, echo = FALSE, message = FALSE, warning = FALSE}
 library(tidyverse)
 library(stringr)
 library(sf)
@@ -80,7 +80,8 @@ tree_list %>%
              box_css = "border: 0px solid #ddd; padding: 10px; ") 
 
 ```
-
-Then I saw that Fluorish published a treemap template. Getting the data ready for this type of hierarchical structure led me to Botany 101. Scientific names of trees have a hierarchical structure part of which includes Family > Genus > Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create dynamic visualizations with Flourish.  In the treemap, the size of each rectangle is in proportion to the number of those trees in the city's tree database.
+   
+   
+Then I saw that Fluorish published a treemap template. Getting the data ready for this type of hierarchical structure led me to Botany 101. Scientific names of trees have a hierarchical structure part of which includes Family > Genus > Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create dynamic visualizations with Flourish.  In the treemap, the size of each rectangle is proportional to the number of those trees in the city's tree database.
 
 <div class="flourish-embed" data-src="visualisation/56816"></div><script src="https://public.flourish.studio/resources/embed.js"></script>

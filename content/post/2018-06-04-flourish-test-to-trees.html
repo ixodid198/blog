@@ -1,8 +1,8 @@
 ---
-title: Flourish Test - TO Trees
+title: Tree Taxonomy in Toronto
 author: Lawrence Pilch
 date: '2018-06-04'
-slug: flourish-test-to-trees
+slug: tree-taxonomy-in-toronto
 categories:
   - Toronto
   - Visualization
@@ -18,7 +18,2732 @@ subtitle: ''
 <p>The city of Toronto has a large (&gt; 567,000) database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto, which is about one quarter of all the tree species in North America. However tropical forests win the diversity crown with tens of thousands of species.</p>
 <p>Usually when you start to look at a dataset a histogram is a good idea. A quick one in R reveals:</p>
 <p>But I want to see the tree types so I tried a scrolling table with proportional colour bars:</p>
-<p>Then I saw that Fluorish published a treemap template. Getting the data ready for this type of hierarchical structure led me to Botany 101. Scientific names of trees have a hierarchical structure part of which includes Family &gt; Genus &gt; Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create dynamic visualizations with Flourish. In the treemap, the size of each rectangle is in proportion to the number of those trees in the city’s tree database.</p>
+<div style="border: 0px solid #ddd; padding: 10px; overflow-y: scroll; height: 500px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; float: left; margin-right: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Rank
+</th>
+<th style="text-align:left;">
+Common Tree Name
+</th>
+<th style="text-align:left;">
+Number
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 100.00%">74,668</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Honey Locust</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 32.53%">24,286</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Colorado Blue Spruce</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 29.35%">21,917</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Crab Apple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 27.24%">20,342</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Silver Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 26.96%">20,127</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Littleleaf Linden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 20.90%">15,608</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Linden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 20.38%">15,220</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Schwedler Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 18.49%">13,807</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japanese Tree Lilac</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 17.70%">13,215</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Red Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 15.59%">11,644</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sugar Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 15.10%">11,273</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Red (Green) Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 14.88%">11,109</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ginkgo</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 14.51%">10,836</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Skyline Honey Locust</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 13.75%">10,267</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Austrian Pine</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 13.65%">10,189</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Freeman Maple ‘Autumn Blaze’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 12.92%"> 9,644</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Shademaster Honey Locust</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 12.89%"> 9,624</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Crimson King Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 12.86%"> 9,603</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 12.07%"> 9,009</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Kentucky-Coffee Tree</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 11.98%"> 8,947</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Spruce</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 11.98%"> 8,944</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Red Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 9.68%"> 7,225</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+23
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Service-Berry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 9.56%"> 7,138</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+24
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Callery Pear ‘Chanticleer’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 9.43%"> 7,040</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+25
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Siberian Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 8.78%"> 6,558</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+26
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hack-Berry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 8.11%"> 6,055</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+27
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Manitoba Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 7.47%"> 5,575</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+28
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">London Plane</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 6.20%"> 4,627</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+29
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Spruce</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.98%"> 4,468</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+30
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Northern Catalpa</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.95%"> 4,443</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+31
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.73%"> 4,279</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+32
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Tulip-Tree</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.72%"> 4,270</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+33
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.47%"> 4,085</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+34
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Eastern White Cedar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.29%"> 3,951</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+35
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Redmond Linden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.26%"> 3,924</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+36
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Littleleaf Greenspire Linden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.21%"> 3,890</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+37
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Columnar Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.04%"> 3,762</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+38
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Norway Spruce</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 4.43%"> 3,311</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+39
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hedge Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 4.38%"> 3,274</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+40
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Accolade Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 4.30%"> 3,214</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+41
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Emerald Queen Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 4.18%"> 3,121</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 4.16%"> 3,109</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 4.10%"> 3,063</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+44
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Shubert Choke Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.91%"> 2,918</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.69%"> 2,758</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+46
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bur Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.61%"> 2,699</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+47
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Weeping White Mulberry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.51%"> 2,622</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+48
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.50%"> 2,610</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+49
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sunburst Honey Locust</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.34%"> 2,493</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pear</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.30%"> 2,466</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+51
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.25%"> 2,430</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Amur Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.23%"> 2,413</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Horsechestnut</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.22%"> 2,406</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cedar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.22%"> 2,403</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Scots Pine</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.09%"> 2,309</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+56
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Turkish Hazel</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.02%"> 2,258</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+57
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Juniper</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.01%"> 2,248</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+58
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Apple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.81%"> 2,097</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+59
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Lilac</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.73%"> 2,035</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+60
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Freeman Maple ‘Armstrong’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.68%"> 2,000</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+61
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Mountainash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.65%"> 1,981</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Choke Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.60%"> 1,940</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mulberry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.59%"> 1,931</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+64
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Saucer Magnolia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.52%"> 1,884</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+65
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Horsechestnut (Ruby Red)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.40%"> 1,792</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+66
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japanese Katsura</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.34%"> 1,746</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+67
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Locust</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.34%"> 1,744</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+68
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Pine</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.33%"> 1,740</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+69
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bradford Pear</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.29%"> 1,707</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.23%"> 1,662</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+71
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Basswood</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.22%"> 1,660</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+72
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Royal Red Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.22%"> 1,656</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+73
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mountain Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.20%"> 1,642</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+74
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Yew</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.13%"> 1,590</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+75
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Valley Forge Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.08%"> 1,556</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+76
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Swamp White Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.07%"> 1,543</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+77
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japanese Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.02%"> 1,512</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+78
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">English Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.02%"> 1,511</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+79
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Chinese Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.87%"> 1,393</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+80
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japanese Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.81%"> 1,353</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+81
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hawthorn</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.70%"> 1,272</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+82
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Plum</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.70%"> 1,270</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+83
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Red-Bud</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.70%"> 1,269</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+84
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Amur Cork</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.69%"> 1,261</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+85
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Tree-Of-Heaven</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.64%"> 1,228</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+86
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Mulberry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.61%"> 1,205</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+87
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Green Mountain Sugar Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.58%"> 1,177</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+88
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.56%"> 1,164</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+89
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Beech</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.48%"> 1,108</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+90
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Douglas Fir</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.45%"> 1,082</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+91
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Globe Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.39%"> 1,035</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+92
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pine</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.38%"> 1,032</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+93
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Eastern Red Cedar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.36%"> 1,019</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+94
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">American Mountainash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.35%"> 1,006</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+95
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pyramidal English Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.32%"> 982</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+96
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Littleleaf Glenleven Linden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.30%"> 968</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+97
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ohio Buckeye</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.29%"> 963</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+98
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Locust Purple Robe</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.26%"> 941</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+99
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.25%"> 931</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+100
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Balsam Fir</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.19%"> 887</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+101
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Walnut</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.12%"> 837</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+102
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Fir</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.12%"> 837</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+103
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pin Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.07%"> 797</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+104
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Zelkova</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.06%"> 794</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+105
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Iron-Wood (Hop-Hornbeam)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.05%"> 786</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+106
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.03%"> 770</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+107
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Eastern Hemlock</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.00%"> 748</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+108
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.97%"> 721</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+109
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Oakleaf Mountainash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.97%"> 721</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+110
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Weeping Willow</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.89%"> 667</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+111
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Yellow Buckeye</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.87%"> 650</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+112
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Legacy Sugar Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.87%"> 646</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+113
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Willow</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.79%"> 591</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+114
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Russian-Olive</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.79%"> 588</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+115
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Tatarian Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.78%"> 582</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+116
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Peach</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.77%"> 578</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+117
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bloodgood London Plane</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.74%"> 549</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+118
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Summit Red Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.73%"> 546</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+119
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Scotch Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.69%"> 512</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+120
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Butternut (White Walnut)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.67%"> 501</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+121
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">American Sweetgum</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.64%"> 480</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+122
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Poplar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.62%"> 464</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+123
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Yellow-Wood</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.59%"> 441</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+124
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Superform Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.59%"> 439</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+125
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ginkgo ‘Autumn Gold’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.57%"> 422</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+126
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">False Cypress</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.56%"> 419</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+127
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ginkgo “Columnar”</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.55%"> 410</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+128
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Larch (Tamarack)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.55%"> 410</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+129
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Red Pine</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.52%"> 389</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+130
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Copper Beech</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.50%"> 371</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+131
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Marshall Red Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.50%"> 370</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+132
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Silver Queen Silver Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.48%"> 357</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+133
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Carolina Poplar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.48%"> 355</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+134
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Beech</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.47%"> 348</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+135
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Deborah Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.45%"> 333</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+136
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Silver Fir</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.42%"> 313</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+137
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pioneer Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.40%"> 296</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+138
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ruby Lace Honey Locust</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.40%"> 295</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+139
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cucumber-Tree, Cucumber Magnolia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.39%"> 293</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+140
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Serbian Spruce</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.37%"> 277</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+141
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sycamore Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.35%"> 264</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+142
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Purpleleaf Beech</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.34%"> 252</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+143
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Buckthorn</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.33%"> 246</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+144
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">American Beech</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.32%"> 242</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+145
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.32%"> 238</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+146
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Alder</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.31%"> 235</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+147
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.31%"> 231</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+148
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Walnut</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.31%"> 228</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+149
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Summer Sprite Linden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.29%"> 213</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+150
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Golden-Chain</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.28%"> 211</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+151
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Dogwood</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.27%"> 205</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+152
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Gum Black</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.27%"> 200</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+153
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">‘Autumn Blaze’ Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.25%"> 190</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+154
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Beech “Columnar”</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.25%"> 184</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+155
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Freeman Maple ‘Sienna Glen’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.24%"> 181</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+156
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Chinkapin Oak</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.24%"> 177</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+157
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Slippery (Red) Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.23%"> 174</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+158
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Willow</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.23%"> 172</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+159
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Rock Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.23%"> 170</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+160
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Trembling Aspen (Poplar)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.20%"> 150</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+161
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Maple ‘Green Column’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.20%"> 147</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+162
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Lombardy Poplar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.19%"> 140</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+163
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Hornbeam</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.18%"> 135</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+164
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Crimean Linden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.18%"> 134</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+165
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pink Flowering Dogwood</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.18%"> 133</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+166
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.18%"> 131</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+167
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Patmore Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.17%"> 124</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+168
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Elm ‘Princeton’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.16%"> 123</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+169
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cottonwood Poplar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.16%"> 121</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+170
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hawthorn ‘Winter King’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.16%"> 120</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+171
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japanese Pagodatree</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.16%"> 116</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+172
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Corkscrew Willow</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.15%"> 109</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+173
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Freeman Maple ‘Jeffersred’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.14%"> 108</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+174
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mophead Catalpa</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.14%"> 108</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+175
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Ash ‘Autumn Purple’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.14%"> 108</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+176
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Freeman Maple ‘Marmo’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.14%"> 106</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+177
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Summershade Norway Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.14%"> 103</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+178
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Freeman Maple ‘Celebration’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.14%"> 102</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+179
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Blue-Beech (American Hornbeam)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.13%"> 99</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+180
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japanese Yew</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.13%"> 99</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+181
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Dawn Redwood</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.12%"> 90</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+182
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Apricot</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.12%"> 86</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+183
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Fir</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.12%"> 86</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+184
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Armstrong Columnar Red Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.11%"> 82</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+185
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Cutleaf Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.11%"> 79</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+186
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">English Walnut</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.10%"> 77</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+187
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Karpick Red Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.10%"> 72</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+188
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Shagbark Hickory</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.10%"> 72</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+189
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Boleana White Poplar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.10%"> 71</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+190
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Alder</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.09%"> 70</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+191
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">American Smoketree</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.09%"> 68</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+192
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">River Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.09%"> 68</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+193
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Redmond Linden ’Continental</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.09%"> 67</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+194
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sumach Staghorn</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.09%"> 67</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+195
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Purpleleaf Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.09%"> 65</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+196
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hazel</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.08%"> 63</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+197
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sycamore Plane</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.08%"> 63</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+198
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Hornbeam Pyramidal</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.08%"> 61</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+199
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pussy Willow</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.08%"> 58</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+200
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Spruce</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.08%"> 57</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+201
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hickory</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.08%"> 57</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+202
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Yellow Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.08%"> 57</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+203
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Grey Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.07%"> 56</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+204
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Panicled Goldenraintree, Varnish Tree</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 48</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+205
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Blue Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 46</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+206
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bitternut Hickory</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 42</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+207
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Siberian Peashrub</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 42</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+208
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Balsam Poplar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 39</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+209
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sassafras</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 39</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+210
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Silver Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 38</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+211
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black (Red) Mulberry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 37</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+212
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Ash ‘Autumn Applause’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 37</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+213
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sargent Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 35</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+214
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Jack Pine</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 34</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+215
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Paperbark Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 34</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+216
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cornelliancherry Dogwood</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 29</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+217
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hawthorn ‘Tobas’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 27</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+218
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Himalayan Birch ‘Jacquemonti’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 26</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+219
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Butternut Hybrid (White Walnut)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 23</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+220
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">River Birch ’Heritage</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 23</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+221
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Flowering Almond</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 22</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+222
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">American Liberty Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 20</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+223
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">English Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 19</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+224
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Halka Zelkova</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 19</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+225
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japanese Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 19</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+226
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pin Cherry</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 16</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+227
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">American Hazel</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 14</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+228
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mountain Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 14</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+229
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Shantung Maple ‘Warrenred’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 14</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+230
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Largetooth Aspen (Poplar)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 13</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+231
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Whitebeam Mountainash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 12</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+232
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Winged Euonymus (Burning Bush)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 12</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+233
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cherry Weeping</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 10</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+234
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Fall Gold Black Ash</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 10</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+235
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Laurel Willow</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 10</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+236
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Silver Pyramid Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 9</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+237
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Witch-Hazel</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 7</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+238
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Silver White Poplar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 6</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+239
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Amur Maackia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 5</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+240
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Davidiana Elm</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 4</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+241
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Striped Maple</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 4</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+242
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">European Young’s Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.00%"> 3</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+243
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">White Elm ‘Delaware’</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.00%"> 3</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+244
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">American Chestnut</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.00%"> 2</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+245
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bald Cypress</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.00%"> 1</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+246
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Black Birch</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.00%"> 1</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Then I saw that Fluorish published a treemap template. Getting the data ready for this type of hierarchical structure led me to Botany 101. Scientific names of trees have a hierarchical structure part of which includes Family &gt; Genus &gt; Species. Trees in the same genus share more in common in terms of bark, leaf, flower, seed, and general appearance than trees in different genera. With this new tree taxonomy knowledge it was super easy to create dynamic visualizations with Flourish. In the treemap, the size of each rectangle is proportional to the number of those trees in the city’s tree database.</p>
 <div class="flourish-embed" data-src="visualisation/56816">
 
 </div>
