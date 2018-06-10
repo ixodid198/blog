@@ -18,7 +18,7 @@ Here's a map  Here's a map Here's a map Here's a map Here's a map Here's a map H
 
 # Create neighbourhood map of toronto
 # Colour 140 neighbourhoods according to B&E activity (2014-2017)
-# 
+# This is the version that's on the blog
 
 library(tidyverse)
 library(ggmap)
@@ -54,10 +54,8 @@ rd_desc_df <- st_set_geometry(rd_desc, NULL)
 # Look at highways
 xway <- filter(rd_desc, FCODE_DESC == "Expressway")
 
-
 # Look at major arterial
 mart <- filter(rd_desc, FCODE_DESC == "Major Arterial")
-
 
 # Add up number of B&Es in each neighbourhood
 hood <- be %>% 
@@ -121,74 +119,75 @@ pal <- colorBin("YlOrRd", domain = hood_shp$be_per_cap, bins = 8, pretty = TRUE)
 
 
 # Add interactive map ---------------------------------------------------------------------
-leaflet(options = leafletOptions(minZoom = 11, maxZoom = 14)) %>% 
+leaflet(options = leafletOptions(minZoom = 11, maxZoom = 16), width = "100%") %>% 
   addTiles() %>% 
   
   # Raster image surrounding Toronto
-  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addProviderTiles(providers$OpenStreetMap.BlackAndWhite) %>% 
   
-  # Center map north of Toronto City Hall slightly zoomed in
-  setView(map, 
-          lng = -79.384293, 
-          lat = 43.685, #43.653908, 
-          zoom = 12) %>% 
+#  Center map north of Toronto City Hall slightly zoomed in
+  setView(map,
+          lng = -79.384293,
+          lat = 43.685, #43.653908,
+          zoom = 12) %>%
 
   # Vector neighbourhoods
   addPolygons(data = hood_shp, 
               fillColor = ~pal(be_per_cap),
-              weight = 2,
-              opacity = 1,
-              color = "white",
-              dashArray = "0",
-              fillOpacity = 1.0,
+              color = NA,
+              fillOpacity = 1,
 
               # Highlight neighbourhoods upon mouseover
               highlight = highlightOptions(
-              weight = 3,
-              color = "white",
-              dashArray = "",
-              fillOpacity = 0.7,
-              bringToFront = TRUE,
-              sendToBack = TRUE), # Upon mouseout, returns colors to as they were before
+                weight = 3,
+                fillOpacity = 0,
+                color = "black",
+                opacity = 1.0,
+                bringToFront = TRUE,
+                sendToBack = TRUE),  # Upon mouseout, returns colors to as they were before
 
-              # Add label info when mouseover
+              # # Add label info when mouseover
               label = labels,
               labelOptions = labelOptions(
               style = list("font-weight" = "normal", padding = "3px 8px"),
               textsize = "15px",
-              direction = "auto")) %>% 
+              direction = "auto")) %>%
   
   # Add highways
   addPolygons(data = xway,
-              color = "sienna", 
-              weight = 1.0, 
-              opacity = 1.0, 
-              fillOpacity = 0.7) %>% 
-  
+              color = "sienna",
+              weight = 1.0,
+              opacity = 1.0,
+              fillOpacity = 0.7) %>%
+
   # Add major arterial
   addPolygons(data = mart,
-              color = "#737373", 
-              weight = 2.0, 
-              opacity = 0.5, 
-              fillOpacity = 1.0) %>% 
-  
+              color = "#737373",
+              weight = 1.0,
+              opacity = 1.0,
+              fillOpacity = 1.0) %>%
+
   # Add parks
   addPolygons(data = parks,
               color = "green",
               weight = 1.0,
               opacity = 1.0,
-              fillOpacity = 1.0) %>%
+              fillOpacity = 1.0,
+              options = pathOptions(clickable = FALSE)) %>%
+  
+  # Add border
+  addPolylines(data = hood_shp,
+               color = "black",
+               stroke = TRUE,
+               opacity = 1, 
+               weight = 1) %>% 
  
   # Add legend
   addLegend(data = hood_shp, 
-            colors =c("#FCFCCA",  "#F9E2A3", "#F6C88A", "#F4AE7E", "#F28672", "#E16668", "#C1576B"),
-            labels= c("Less", "", "", "", "", "", "More"),
+            colors =c("#AA122E", "#F4AE7E", "#FEFDB7"),
+            labels= c("More", "", "Less"),
             opacity = 1.0, 
-            title = "Break and Enter / Capita",
+            title = "B&Es",
             position = "bottomright")
-
-
-
-
 ```
 
