@@ -12,7 +12,9 @@ tags:
 subtitle: ''
 ---
 
-Here's a map  Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map Here's a map 
+The Toronto Police make public the data for all the crimes committed in the city. Recently, the data for 2014 to 2017 became [available](http://data.torontopolice.on.ca/). Since I wanted to learn about interactive maps in R, I thought it would be interesting to see a heat map of break and enter crimes across the city's 140 neighbourhoods. 
+
+The city defines the crime of Break and Enter as, "The act of entering a place with the intent to commit an indictable offence therein." Hovering your mouse over each neighbourhood displays the rank of each neighbourhood, with one being the area that has had the *greatest* number of B&Es per person. To make the rank a little more meaningful, I also show how each neighbourhood compares to the the average rate of B&Es in the city.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
@@ -134,14 +136,14 @@ leaflet(options = leafletOptions(minZoom = 11, maxZoom = 16), width = "100%") %>
   # Vector neighbourhoods
   addPolygons(data = hood_shp, 
               fillColor = ~pal(be_per_cap),
-              color = NA,
+              color = "transparent",
               fillOpacity = 1,
 
               # Highlight neighbourhoods upon mouseover
               highlight = highlightOptions(
-                weight = 3,
+                weight = 4,
                 fillOpacity = 0,
-                color = "black",
+                color = "white",
                 opacity = 1.0,
                 bringToFront = TRUE,
                 sendToBack = TRUE),  # Upon mouseout, returns colors to as they were before
@@ -177,7 +179,7 @@ leaflet(options = leafletOptions(minZoom = 11, maxZoom = 16), width = "100%") %>
   
   # Add border
   addPolylines(data = hood_shp,
-               color = "black",
+               color = "white",
                stroke = TRUE,
                opacity = 1, 
                weight = 1) %>% 
@@ -189,5 +191,6 @@ leaflet(options = leafletOptions(minZoom = 11, maxZoom = 16), width = "100%") %>
             opacity = 1.0, 
             title = "B&Es",
             position = "bottomright")
+
 ```
 
