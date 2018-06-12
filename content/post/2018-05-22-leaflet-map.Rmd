@@ -14,7 +14,9 @@ subtitle: ''
 
 The Toronto Police make public the data for all the crimes committed in the city. Recently, the data for 2014 to 2017 became [available](http://data.torontopolice.on.ca/). Since I wanted to learn about interactive maps in R, I thought it would be interesting to see a heat map of break and enter crimes across the city's 140 neighbourhoods. 
 
-The city defines the crime of Break and Enter as, "The act of entering a place with the intent to commit an indictable offence therein." Hovering your mouse over each neighbourhood displays the rank of each neighbourhood, with one being the area that has had the *greatest* number of B&Es per person. To make the rank a little more meaningful, I also show how each neighbourhood compares to the the average rate of B&Es in the city.
+Leaflet is a popular open-source JavaScript library for interactive maps. RStudio makes a package that enables you to build Leaflet maps from R.
+
+The city's Major Crime Indicator Glossary defines the crime of break and enter as, "The act of entering a place with the intent to commit an indictable offence therein." Hovering your mouse over each neighbourhood displays the rank of each neighbourhood, with one being the area that has had the *greatest* number of B&Es per person over the period 2014-2017. To make the rank a little more meaningful, I also show how each neighbourhood compares to the average rate of B&Es in the city.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
