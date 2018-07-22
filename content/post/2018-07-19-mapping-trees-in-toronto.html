@@ -1,0 +1,122 @@
+---
+title: Mapping Trees in Toronto
+author: Lawrence Pilch
+date: '2018-07-19'
+slug: mapping-trees-in-toronto
+categories:
+  - Toronto
+  - Visualization
+tags:
+  - Toronto
+  - Visualization
+subtitle: ''
+---
+
+
+
+<p>As cities go, Toronto is often ranked as one of the greener ones.</p>
+<p>The city has a database of trees that reside mostly on public land that consists of more than 500,000 trees and 246 species. I used Shiny and Leaflet-R to visualize the distribution of different species across the city. You can see it here.</p>
+<p>The drop down allows you to select tree species by common name or Latin name. If you backspace you can enter a search term. For example, typing “maple”&quot; shows the XX variety of maples in the city.</p>
+<p>Each blue circle is a tree. Darker circles represent multiple trees at the same location. If you zoom in close, named streets appear.</p>
+<p>Clicking on any blue circle reveals more information about that specific tree including: address, coordinates, diameter 1.3m above the ground, and the tree family that this species belongs to.</p>
+<p>Here are a few species that had interesting, non-uniform distributions.</p>
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+  .col3 div {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+</style>
+<font size = 3>
+<div class="col3">
+<ul>
+<li>American Mountainash</li>
+<li>Superform Norway Maple</li>
+<li>Weeping White Mulberry</li>
+<li>Yew</li>
+</ul>
+</div>
+<p></font></p>
+<p>I was curious about which tree had the greatest variety of other tree species within a 10m radius. After chugging away for a while the answer came up in the NE corner of High Park which is shown with a red circle on the map.</p>
+<p>Unfortunately the data isn’t perfect as 502 trees had these exact same lat/long coordinates. Still, here are the 47 different species that likely reside in close proximity.</p>
+<font size = 3>
+<div class = "col3">
+<div>
+<ul>
+<li>Amur Cork</li>
+<li>Apple</li>
+<li>Ash</li>
+<li>Austrian Pine</li>
+<li>Black Cherry <br><br />
+</li>
+<li>Black Maple</li>
+<li>Black Oak</li>
+<li>Black Willow</li>
+<li>Bur Oak</li>
+<li>Callery Pear ‘Chanticleer’ <br><br />
+</li>
+<li>Carolina Poplar</li>
+<li>Colorado Blue Spruce</li>
+<li>Columnar Norway Maple</li>
+<li>Crab Apple</li>
+<li>Eastern Hemlock <br><br />
+</li>
+<li>European Beech</li>
+<li>Ginkgo</li>
+<li>Hack-Berry</li>
+<li>Honey Locust</li>
+<li>Kentucky-Coffee Tree</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Linden</li>
+<li>Manitoba Maple</li>
+<li>Maple</li>
+<li>Mulberry</li>
+<li>Norway Maple <br><br />
+</li>
+<li>Oak</li>
+<li>Red (Green) Ash</li>
+<li>Red Maple</li>
+<li>Red Oak</li>
+<li>Sassafras <br><br />
+</li>
+<li>Scotch Elm</li>
+<li>Scots Pine</li>
+<li>Service-Berry</li>
+<li>Siberian Elm</li>
+<li>Silver Maple <br><br />
+</li>
+<li>Silver Queen Silver Maple</li>
+<li>Silver White Poplar</li>
+<li>Skyline Honey Locust</li>
+<li>Sugar Maple</li>
+<li>Tulip-Tree</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Walnut</li>
+<li>Weeping Willow</li>
+<li>White Ash</li>
+<li>White Oak</li>
+<li>White Pine</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Willow</li>
+<li>Yew</li>
+</ul>
+</div>

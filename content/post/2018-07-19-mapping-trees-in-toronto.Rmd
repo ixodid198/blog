@@ -1,0 +1,121 @@
+---
+title: Mapping Trees in Toronto
+author: Lawrence Pilch
+date: '2018-07-19'
+slug: mapping-trees-in-toronto
+categories:
+  - Toronto
+  - Visualization
+tags:
+  - Toronto
+  - Visualization
+subtitle: ''
+---
+As cities go, Toronto is often ranked as one of the greener ones. 
+
+The city has a database of trees that reside mostly on public land that consists of more than 500,000 trees and 246 species. I used Shiny and Leaflet-R to visualize the distribution of different species across the city. You can see it here.
+
+The drop down allows you to select tree species by common name or Latin name. If you backspace you can enter a search term. For example, typing "maple"" shows the 39 variety of maples in the city.
+
+Each blue circle is a tree. Darker circles represent multiple trees at the same location. If you zoom in close, named streets appear.
+
+Clicking on any blue circle reveals more information about that specific tree including: address, coordinates, diameter 1.3m above the ground, and the tree family that this species belongs to.
+
+Here are a few species that had interesting, non-uniform distributions.
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+  .col3 div {
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+</style>
+
+<font size = 3>
+<div class = "col3">
+- American Mountainash
+- Superform Norway Maple
+- Weeping White Mulberry
+- Yew
+</div>
+</font>
+
+I was curious about which tree had the greatest variety of other tree species within a 10m radius.
+After chugging away for a while my Mac revealed the answer to be in the NE corner of High Park which is shown with a red circle on the map.
+
+Unfortunately the data isn't perfect as 502 trees had these exact same lat/long coordinates. Still, here are the 47 different species that likely reside in close proximity.
+
+<font size = 3>
+<div class = "col3">
+<div>
+- Amur Cork
+- Apple
+- Ash
+- Austrian Pine
+- Black Cherry
+<br>  
+- Black Maple
+- Black Oak
+- Black Willow
+- Bur Oak
+- Callery Pear 'Chanticleer'
+<br>  
+- Carolina Poplar
+- Colorado Blue Spruce
+- Columnar Norway Maple
+- Crab Apple
+- Eastern Hemlock
+<br>  
+- European Beech
+- Ginkgo
+- Hack-Berry
+- Honey Locust
+- Kentucky-Coffee Tree
+</div>
+<div> 
+- Linden
+- Manitoba Maple
+- Maple
+- Mulberry
+- Norway Maple
+<br>  
+- Oak
+- Red (Green) Ash
+- Red Maple
+- Red Oak
+- Sassafras
+<br>  
+- Scotch Elm
+- Scots Pine
+- Service-Berry
+- Siberian Elm
+- Silver Maple
+<br>  
+- Silver Queen Silver Maple
+- Silver White Poplar
+- Skyline Honey Locust
+- Sugar Maple
+- Tulip-Tree
+</div>
+<div>  
+- Walnut
+- Weeping Willow
+- White Ash
+- White Oak
+- White Pine
+</div>
+<div>
+- Willow
+- Yew 
+</div>
+
