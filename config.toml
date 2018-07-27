@@ -1,4 +1,4 @@
-baseurl = "https://lawsblog.netlify.com/"
+baseurl = "https://lpdata.me/"
 DefaultContentLanguage = "en"
 
 paginate = 10
