@@ -1,0 +1,5 @@
+# Redirect in public
+
+[[redirects]]
+from = "/lawsblog.netlify.com"
+to = "/lpdata.me"

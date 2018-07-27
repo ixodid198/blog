@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Thoughtful Wanderings</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Thoughtful Wanderings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>law9723@gmail.com (Lawrence Pilch)</managingEditor>
+    <webMaster>law9723@gmail.com (Lawrence Pilch)</webMaster>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Canada</title>
+      <link>/tags/canada/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/tags/canada/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Economics</title>
+      <link>/tags/economics/</link>
+      <pubDate>Tue, 20 Mar 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/tags/economics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mathematics</title>
+      <link>/tags/mathematics/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/tags/mathematics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Toronto</title>
+      <link>/tags/toronto/</link>
+      <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/tags/toronto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>/tags/visualization/</link>
+      <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/tags/visualization/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

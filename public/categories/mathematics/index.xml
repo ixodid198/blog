@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mathematics on Thoughtful Wanderings</title>
+    <link>/categories/mathematics/</link>
+    <description>Recent content in Mathematics on Thoughtful Wanderings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>law9723@gmail.com (Lawrence Pilch)</managingEditor>
+    <webMaster>law9723@gmail.com (Lawrence Pilch)</webMaster>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Whose a Buffon?</title>
+      <link>/post/whose-a-buffon/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/whose-a-buffon/</guid>
+      <description>I wanted to try a simple interactive visualization using RStudio’s Shiny package and thought Buffon’s needle problem would work well. Around 1732, Georges-Louis Leclerc, Comte de Buffon, a French mathematician, first posed and solved the question that essentially boils down to asking what is the probability that a needle dropped on a floor of parallel lines crosses a line? He discovered that if the length of the needle is less than or equal to the width of the lines the probability is:</description>
+    </item>
+    
+  </channel>
+</rss>

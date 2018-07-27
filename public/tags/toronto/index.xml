@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Toronto on Thoughtful Wanderings</title>
+    <link>/tags/toronto/</link>
+    <description>Recent content in Toronto on Thoughtful Wanderings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>law9723@gmail.com (Lawrence Pilch)</managingEditor>
+    <webMaster>law9723@gmail.com (Lawrence Pilch)</webMaster>
+    <lastBuildDate>Thu, 19 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/toronto/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mapping Trees in Toronto</title>
+      <link>/post/mapping-trees-in-toronto/</link>
+      <pubDate>Thu, 19 Jul 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/mapping-trees-in-toronto/</guid>
+      <description>As cities go, Toronto is often ranked as one of the greener ones.
+The city has a database of trees that reside mostly on public land and consists of more than 560,000 trees and 246 species. I used Shiny and Leaflet-R to visualize the distribution of different species across the city. You can see it here.
+The drop down allows you to select tree species by common name or Latin name.</description>
+    </item>
+    
+    <item>
+      <title>Tree Taxonomy in Toronto</title>
+      <link>/post/tree-taxonomy-in-toronto/</link>
+      <pubDate>Mon, 04 Jun 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/tree-taxonomy-in-toronto/</guid>
+      <description>The city of Toronto has a large (&amp;gt; 567,000) database of the trees that live on public land. There are 246 types of trees and shrubs in Toronto, which is about one quarter of all the tree species in North America. However tropical forests win the diversity crown with tens of thousands of species.
+Usually when you start to look at a new dataset its a good idea to look at its overall structure.</description>
+    </item>
+    
+    <item>
+      <title>Leaflet Map</title>
+      <link>/post/leaflet-map/</link>
+      <pubDate>Tue, 22 May 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/leaflet-map/</guid>
+      <description>The Toronto Police make public the data for all the crimes committed in the city. Recently, the data for 2014 to 2017 became available. Since I wanted to learn about interactive maps in R, I thought it would be interesting to see a heat map of break and enter crimes across the city’s 140 neighbourhoods.
+Leaflet is a popular open-source JavaScript library for interactive maps.</description>
+    </item>
+    
+    <item>
+      <title>Climate Change at Home</title>
+      <link>/post/climate-change-at-home/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/climate-change-at-home/</guid>
+      <description>In Al Gore’s latest movie, An Inconvenient Sequel: Truth to Power (2017), I was struck by the image of a plot of summer temperatures moving to the right as time progressed. I thought I’d see whether that shift held true for downtown Toronto.
+Environment Canada has Toronto temperature records going back to 1840. I chose to begin in 1848 so I could group the data into decades ending at the end of 2017.</description>
+    </item>
+    
+    <item>
+      <title>Inflation - Part II</title>
+      <link>/post/inflation-part-ii/</link>
+      <pubDate>Tue, 20 Mar 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/inflation-part-ii/</guid>
+      <description>What if we added the median home price of just detached homes in Toronto? This was tough data to get so I only have data for the start and end dates. Since detached homes, as a group, are generally more expensive than other types of homes I wondered whether the rate of appreciation of a home had to do with its cost. Do more expensive homes appreciate faster?
+This plot looks at median, detached home prices in different areas of central Toronto.</description>
+    </item>
+    
+    <item>
+      <title>Inflation - Part I</title>
+      <link>/post/inflation/</link>
+      <pubDate>Mon, 19 Mar 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/inflation/</guid>
+      <description>I’ve always loved the stories a good plot could tell, so I decided to learn more about data visualization and R. R is a funny name for a handy language that’s designed to deal with data. (Aside: R evolved from S which came from Bell Labs in the 70s which is further evidence that everything was invented in Bell Labs in the 70s.)
+For a first try, I thought I’d plot a simple time-series of inflation-adjusted prices of things in my city.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>#Canada on Thoughtful Wanderings</title>
+    <link>/categories/#canada/</link>
+    <description>Recent content in #Canada on Thoughtful Wanderings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>law9723@gmail.com (Lawrence Pilch)</managingEditor>
+    <webMaster>law9723@gmail.com (Lawrence Pilch)</webMaster>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/#canada/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Is it Windy Outside?</title>
+      <link>/post/is-it-windy-outside/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/is-it-windy-outside/</guid>
+      <description>My earlier experience with Wordpress made me think there had to be a better way to do simple, reliable sites online. A blog is static, meaning everyone sees the same content. Yihui Xie from RStudio created what for my needs is a better way to host content.
+The web is built with HTML, Javascript and css. Everything boils down to these eventually. But that doesn’t mean you have to use these languages directly to make sites for the web.</description>
+    </item>
+    
+  </channel>
+</rss>

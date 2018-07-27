@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Canada on Thoughtful Wanderings</title>
+    <link>/tags/canada/</link>
+    <description>Recent content in Canada on Thoughtful Wanderings</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>law9723@gmail.com (Lawrence Pilch)</managingEditor>
+    <webMaster>law9723@gmail.com (Lawrence Pilch)</webMaster>
+    <lastBuildDate>Fri, 27 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/canada/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Is it Windy Outside?</title>
+      <link>/post/is-it-windy-outside/</link>
+      <pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/is-it-windy-outside/</guid>
+      <description>My earlier experience with Wordpress made me think there had to be a better way to do simple, reliable sites online. A blog is static, meaning everyone sees the same content. Yihui Xie from RStudio created what for my needs is a better way to host content - blogdown.
+The web is built with HTML, Javascript and css. Everything boils down to these eventually. But that doesn’t mean you have to use these languages directly to make sites for the web.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Population Change</title>
+      <link>/post/visualizing-population-change/</link>
+      <pubDate>Sat, 31 Mar 2018 00:00:00 +0000</pubDate>
+      <author>law9723@gmail.com (Lawrence Pilch)</author>
+      <guid>/post/visualizing-population-change/</guid>
+      <description>Every time I’ve visited Newfoundland and Labrador I’ve loved it. So, when I hear about the shrinking of small towns there my ears perk up. I thought it would be interesting to visualize the change in communities of all size across all provinces between 2001 and 2016. There are many ways to look at this, here are two. In this post I use the term “city” and “community” interchangeably.
+First, a table.</description>
+    </item>
+    
+  </channel>
+</rss>

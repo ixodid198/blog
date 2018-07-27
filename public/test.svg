@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 504.00 360.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    line, polyline, path, rect, circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<rect x='0.00' y='0.00' width='504.00' height='360.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+<defs>
+  <clipPath id='cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM='>
+    <rect x='27.73' y='68.93' width='447.92' height='230.96' />
+  </clipPath>
+</defs>
+<rect x='27.73' y='68.93' width='447.92' height='230.96' style='stroke-width: 1.07; stroke: none; fill: #FCFCFC;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<polyline points='27.73,235.97 475.65,235.97 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-dasharray: 1.42,4.27; stroke-linecap: butt;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<polyline points='27.73,151.17 475.65,151.17 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-dasharray: 1.42,4.27; stroke-linecap: butt;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<polyline points='48.09,235.97 57.91,235.97 57.91,222.40 72.15,222.40 72.15,212.86 85.31,212.86 85.31,204.54 100.63,204.54 100.63,197.66 113.76,197.66 113.76,197.62 233.08,197.62 233.08,223.96 246.25,223.96 246.25,220.41 259.37,220.41 259.37,216.66 272.50,216.66 272.50,214.76 287.75,214.76 287.75,201.63 300.87,201.63 300.87,184.73 314.00,184.73 314.00,171.59 368.77,171.59 368.77,171.92 376.46,171.92 376.46,174.51 ' style='stroke-width: 1.60; stroke: #8DD3C7; stroke-linecap: butt;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<circle cx='376.46' cy='174.51' r='2.49pt' style='stroke-width: 0.71; stroke: #8DD3C7; fill: #8DD3C7;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<g clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)'><text x='380.00' y='179.21' style='font-size: 8.54px; fill: #333333; font-family: Arial;' textLength='62.51px' lengthAdjust='spacingAndGlyphs'>Minimum Wage</text></g>
+<polyline points='48.09,235.97 61.22,243.60 74.35,244.62 87.51,255.98 100.63,251.40 113.76,252.76 126.89,247.84 140.05,251.74 153.18,241.90 166.30,231.73 179.43,227.49 192.59,226.81 205.72,229.86 218.84,236.82 231.97,236.99 245.13,238.34 258.26,241.40 271.38,238.51 284.51,231.39 297.67,240.21 310.80,225.96 323.92,234.44 337.05,228.34 350.21,239.87 363.34,229.18 376.46,227.15 ' style='stroke-width: 1.60; stroke: #BEBADA; stroke-linecap: butt;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<circle cx='376.46' cy='227.15' r='2.49pt' style='stroke-width: 0.71; stroke: #BEBADA; fill: #BEBADA;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<g clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)'><text x='379.94' y='230.24' style='font-size: 8.54px; fill: #333333; font-family: Arial;' textLength='90.53px' lengthAdjust='spacingAndGlyphs'>Median Family Income</text></g>
+<polyline points='48.09,235.97 61.22,258.02 74.35,272.09 87.51,279.73 100.63,278.54 113.76,284.64 126.89,289.39 140.05,283.63 153.18,281.76 166.30,277.35 179.43,272.60 192.59,271.42 205.72,262.09 218.84,257.00 231.97,248.52 245.13,241.90 258.26,237.33 271.38,229.69 284.51,232.24 297.67,225.28 310.80,212.56 323.92,203.41 337.05,192.55 350.21,183.56 363.34,169.66 376.46,149.30 ' style='stroke-width: 1.60; stroke: #FB8072; stroke-linecap: butt;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<circle cx='376.46' cy='149.30' r='2.49pt' style='stroke-width: 0.71; stroke: #FB8072; fill: #FB8072;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<g clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)'><text x='380.01' y='152.63' style='font-size: 8.54px; fill: #333333; font-family: Arial;' textLength='60.03px' lengthAdjust='spacingAndGlyphs'>Average Home</text></g>
+<polyline points='48.09,235.97 48.13,235.97 48.13,229.02 61.22,229.02 61.22,224.44 74.35,224.44 74.35,130.99 198.02,130.99 198.02,140.31 247.43,140.31 247.43,136.07 261.49,136.07 261.49,114.87 310.87,114.87 310.87,108.60 376.46,108.60 376.46,108.60 ' style='stroke-width: 1.60; stroke: #80B1D3; stroke-linecap: butt;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<circle cx='376.46' cy='108.60' r='2.49pt' style='stroke-width: 0.71; stroke: #80B1D3; fill: #80B1D3;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<g clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)'><text x='380.28' y='118.29' style='font-size: 8.54px; fill: #333333; font-family: Arial;' textLength='17.49px' lengthAdjust='spacingAndGlyphs'>TTC</text></g>
+<polyline points='48.09,235.97 61.22,235.97 61.22,222.06 74.35,222.06 74.35,224.61 87.51,224.61 87.51,228.00 100.63,228.00 100.63,183.90 113.76,183.90 113.76,188.65 126.89,188.65 126.89,191.87 140.05,191.87 140.05,195.43 153.18,195.43 153.18,197.47 166.30,197.47 166.30,201.03 179.43,201.03 179.43,206.46 192.59,206.46 192.59,211.38 205.72,211.38 205.72,215.62 218.84,215.62 218.84,220.87 231.97,220.87 231.97,224.10 245.13,224.10 245.13,228.00 258.26,228.00 258.26,144.38 271.38,144.38 271.38,149.98 284.51,149.98 284.51,155.92 297.67,155.92 297.67,156.43 310.80,156.43 310.80,79.43 323.92,79.43 323.92,88.76 337.05,88.76 337.05,93.34 350.21,93.34 350.21,96.22 363.34,96.22 363.34,102.15 376.46,102.15 376.46,105.55 ' style='stroke-width: 1.60; stroke: #FDB462; stroke-linecap: butt;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<circle cx='376.46' cy='105.55' r='2.49pt' style='stroke-width: 0.71; stroke: #FDB462; fill: #FDB462;' clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)' />
+<g clip-path='url(#cpMjcuNzMzN3w0NzUuNjU0fDI5OS44OTF8NjguOTM=)'><text x='376.98' y='101.94' style='font-size: 8.54px; fill: #333333; font-family: Arial;' textLength='50.02px' lengthAdjust='spacingAndGlyphs'>Toronto Star</text></g>
+<defs>
+  <clipPath id='cpMHw1MDR8MzYwfDA='>
+    <rect x='0.00' y='0.00' width='504.00' height='360.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='5.67' y='239.55' style='font-size: 9.60px; fill: #999999; font-family: Arial;' textLength='16.68px' lengthAdjust='spacingAndGlyphs'>100</text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='5.67' y='154.75' style='font-size: 9.60px; fill: #999999; font-family: Arial;' textLength='16.68px' lengthAdjust='spacingAndGlyphs'>150</text></g>
+<polyline points='24.74,235.97 27.73,235.97 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMHw1MDR8MzYwfDA=)' />
+<polyline points='24.74,151.17 27.73,151.17 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMHw1MDR8MzYwfDA=)' />
+<polyline points='27.73,299.89 475.65,299.89 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMHw1MDR8MzYwfDA=)' />
+<polyline points='48.09,302.88 48.09,299.89 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMHw1MDR8MzYwfDA=)' />
+<polyline points='179.43,302.88 179.43,299.89 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMHw1MDR8MzYwfDA=)' />
+<polyline points='310.80,302.88 310.80,299.89 ' style='stroke-width: 1.07; stroke: #CCCCCC; stroke-linecap: butt;' clip-path='url(#cpMHw1MDR8MzYwfDA=)' />
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='36.97' y='312.43' style='font-size: 9.60px; fill: #999999; font-family: Arial;' textLength='22.25px' lengthAdjust='spacingAndGlyphs'>1990</text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='168.30' y='312.43' style='font-size: 9.60px; fill: #999999; font-family: Arial;' textLength='22.25px' lengthAdjust='spacingAndGlyphs'>2000</text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='299.67' y='312.43' style='font-size: 9.60px; fill: #999999; font-family: Arial;' textLength='22.25px' lengthAdjust='spacingAndGlyphs'>2010</text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='446.08' y='314.48' style='font-size: 12.00px; fill: #999999; font-family: Arial;' textLength='25.35px' lengthAdjust='spacingAndGlyphs'>Year</text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='27.73' y='52.38' style='font-size: 8.00px; fill: #999999; font-family: Arial;' textLength='233.01px' lengthAdjust='spacingAndGlyphs'>The price of common goods and servces in Toronto (1990-2015). </text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='27.73' y='61.02' style='font-size: 8.00px; fill: #999999; font-family: Arial;' textLength='100.75px' lengthAdjust='spacingAndGlyphs'>Inflation adjusted, 1990=100</text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='27.73' y='36.94' style='font-size: 12.00px; font-weight: bold; fill: #333333; font-family: Arial;' textLength='172.69px' lengthAdjust='spacingAndGlyphs'>Wages Lag Behind Everything</text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='264.89' y='336.82' style='font-size: 6.00px; fill: #999999; font-family: Arial;' textLength='210.76px' lengthAdjust='spacingAndGlyphs'>Source: Government of Canada, Statistics Canada, Ontario Ministry of Energy, </text></g>
+<g clip-path='url(#cpMHw1MDR8MzYwfDA=)'><text x='239.38' y='343.30' style='font-size: 6.00px; fill: #999999; font-family: Arial;' textLength='236.27px' lengthAdjust='spacingAndGlyphs'>       Toronto Real Estate Board, Waybackmachine &gt; http://www.transitstop.net, ProQuest</text></g>
+</svg>
