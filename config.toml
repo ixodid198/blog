@@ -1,7 +1,7 @@
 baseurl = "https://lpdata.me/"
 DefaultContentLanguage = "en"
 
-paginate = 10
+paginate = 8
 
 title = "Thoughtful Wanderings"
 theme = "beautifulhugo"
