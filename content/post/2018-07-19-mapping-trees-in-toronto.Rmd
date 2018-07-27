@@ -13,7 +13,7 @@ subtitle: ''
 ---
 As cities go, Toronto is often ranked as one of the greener ones. 
 
-The city has a database of trees that reside mostly on public land that consists of more than 500,000 trees and 246 species. I used Shiny and Leaflet-R to visualize the distribution of different species across the city. You can see it here.
+The city has a database of trees that reside mostly on public land and consists of more than 560,000 trees and 246 species. I used Shiny and Leaflet-R to visualize the distribution of different species across the city. You can see it [here](https://lawrencepilch.com/tree/).
 
 The drop down allows you to select tree species by common name or Latin name. If you backspace you can enter a search term. For example, typing "maple"" shows the 39 variety of maples in the city.
 
