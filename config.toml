@@ -17,7 +17,7 @@ googleAnalytics = "UA-115577465-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [Params]
-  subtitle = "Data thoughts with a Canadian perspective"
+  subtitle = "Data thoughts with a Canadian perspective."
   logo = "img/tree_small.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
