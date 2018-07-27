@@ -32,17 +32,10 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   description = "Learning about R, data visualization and data science with a Canadian perspective."
   googlefonts = "https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700|Lora"
 
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-#[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#  # position: see values of CSS background-position.
-#  position = "center top"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
+# Redirect
+[[redirects]]
+  from = "/lawsblog.netlify.com"
+  to = "/lpdata.me"
 
 [Author]
   name = "Lawrence Pilch"
