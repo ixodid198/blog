@@ -12,9 +12,6 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 
-#pygmentsUseClassic = true
-#pygmentOptions = "linenos=inline"
-
 disqusShortname = ""
 googleAnalytics = "UA-115577465-1"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
