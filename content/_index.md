@@ -1,2 +1,2 @@
 ## 
-![](https://storage.googleapis.com/lpdata.me/windMap.svg)  
+![](https://lawrencepilch.com/blog_header.png)  
