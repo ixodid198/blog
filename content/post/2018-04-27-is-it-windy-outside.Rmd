@@ -11,7 +11,7 @@ tags:
   - 'Visualization'
 subtitle: Or, What's Up With The Great Lakes Image?
 ---
-NOTE: The blog header image has been replaced by Clifford attractors. A static archived wind map can be seen [here](/img/windmap.png)]
+NOTE: The blog header image has been replaced by Clifford attractors. A static archived wind map can be seen [here](/img/windmap.png)
 
 My earlier experience with Wordpress made me think there had to be a better way to do simple, reliable sites online. A blog is static, meaning everyone sees the same content. Yihui Xie from RStudio created what for my needs is a better way to host content - [blogdown](https://bookdown.org/yihui/blogdown/).
 
