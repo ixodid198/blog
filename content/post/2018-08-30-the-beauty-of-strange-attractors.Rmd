@@ -1,7 +1,7 @@
 ---
 title: The Beauty of Strange Attractors
 author: Lawrence Pilch
-date: '2018-08-30'
+date: '2018-09-17'
 slug: the-beauty-of-strange-attractors
 categories:
   - Mathematics
