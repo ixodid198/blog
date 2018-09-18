@@ -43,7 +43,7 @@ color_bar <- function (color = "#49CA69", fun = "proportion", ...)
 
 
 # Read tree data
-tree <-  st_read("/Users/law/Dropbox/R/to_crime/data/StreetTree_WGS84_April_2016/TMMS_Open_Data_WGS84.shp", quiet = TRUE)
+tree <-  st_read("/Users/law/R/to_crime/data/StreetTree_WGS84_April_2016/TMMS_Open_Data_WGS84.shp", quiet = TRUE)
 
 # Remove tree rows where geometry has weird "e" character
 eez <- str_detect(tree$geometry, "e")
