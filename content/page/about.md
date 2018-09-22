@@ -9,9 +9,19 @@ I like trying to understand how the world works. And pretty things. And iced tea
 Lawrence Pilch, Toronto, Canada
 
 <hr>
-<form method="POST" action="https://formspree.io/law9723@gmail.com">
-  <input type="name" name="Name" placeholder="Name">
-  <input type="email" name="email" placeholder="Email">
-  <textarea name="message" placeholder="Message"></textarea>
-  <button type="submit">Send</button>
+
+
+<form name="submitMeme" action="thanks.md">
+  <p>
+    <label>Name: <input type="text" name="name" size="40"></label>
+  </p>
+  <p>
+    <label>Email: <input type="text" name="email" size="40"></label>
+  </p>
+  <p>
+    <label>Meme URL: <input type="text" name="memeurl" size="40"></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
 </form>
