@@ -19,7 +19,7 @@ I can be reached using this Formamatic-2000.
     <label>Email: <input type="text" name="email" required="required" size="40"></label>
   </p>
   <p>
-    <textarea rows="4" name="msg" required="required" class="form-control" placeholder="Message"></textarea>
+    <textarea rows="4" cols="50" name="msg" required="required" placeholder="Message"></textarea>
   </p>
   <p>
     <button type="submit">Send</button>
