@@ -9,17 +9,17 @@ I like trying to understand how the world works. And pretty things. And iced tea
 Lawrence Pilch, Toronto, Canada
 
 <hr>
-
-
+I can be reached using this Formamatic-2000.
+<p>
 <form name="submitMsg" netlify-honeypot="bot-field" action="/page/thanks" netlify>
   <p>
-    <label>Name: <input type="text" name="name" size="40"></label>
+    <label>Name: <input type="text" name="name" required="required" size="40"></label>
   </p>
   <p>
-    <label>Email: <input type="text" name="email" size="40"></label>
+    <label>Email: <input type="text" name="email" required="required" size="40"></label>
   </p>
   <p>
-    <label>Message: <input type="text" name="msg" size="40"></label>
+    <textarea rows="4" name="msg" required="required" class="form-control" placeholder="Message"></textarea>
   </p>
   <p>
     <button type="submit">Send</button>
