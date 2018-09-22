@@ -9,16 +9,9 @@ I like trying to understand how the world works. And pretty things. And iced tea
 Lawrence Pilch, Toronto, Canada
 
 <hr>
-<form action="https://formspree.io/law9723@gmail.com" method="POST">
-  <label for="name">Name: </label>
-  <input type="text" name="name" required="required" placeholder="Mihaly Csikszentmihalyi"><br>
-  <label for="email">Email: </label>
-  <input type="email" name="_replyto" required="required" placeholder="email"><br>
-  <label for="message">Your message:</label><br>
-  <textarea rows="4" name="message" size="40" id="message" required="required" class="form-control" placeholder="I can't wait to read this!"></textarea>
-  <input type="hidden" name="_next" value="/html/thanks.html" />
-  <br>
-  <input type="submit" value="Send" name="submit" class="btn btn-primary btn-outline">
-  <input type="hidden" name="_subject" value="Website message" />
-  <input type="text" name="_gotcha" style="display:none" />
+<form method="POST" action="https://formspree.io/law9723@gmail.com">
+  <input type="name" name="Name" placeholder="Name">
+  <input type="email" name="email" placeholder="Email">
+  <textarea name="message" placeholder="Message"></textarea>
+  <button type="submit">Send</button>
 </form>
