@@ -16,10 +16,10 @@ I can be reached using this Formamatic-2000.
     <label>Name: <input type="text" name="name" required="required" size="40"></label>
   </p>
   <p>
-    <label>Email: <input type="text" name="email" required="required" size="40"></label>
+    <label>Email: <input type="email" name="email" required="required" size="40"></label>
   </p>
   <p>
-    <textarea rows="4" cols="50" name="msg" required="required" placeholder="Message"></textarea>
+    <textarea rows="4" cols="45" name="msg" required="required" placeholder="Message"></textarea>
   </p>
   <p>
     <button type="submit">Send</button>
