@@ -13,13 +13,13 @@ I can be reached using this Formamatic-2000.
 <p>
 <form name="submitMsg" netlify-honeypot="bot-field" action="/page/thanks" netlify>
   <p>
-    <label>Name: <input type="text" name="name" required="required" size="40"></label>
+    <label>Name: <input type="text" name="name" size="40" maxLength="64" required="required" size="40"></label>
   </p>
   <p>
-    <label>Email: <input type="email" name="email" required="required" size="40"></label>
+    <label>Email: <input type="email" name="email" size="40" maxLength="64" required="required" size="40"></label>
   </p>
   <p>
-    <textarea rows="4" cols="45" name="msg" required="required" placeholder="Message"></textarea>
+    <textarea rows="4" cols="45" name="msg" maxLength="500" required="required" placeholder="Message"></textarea>
   </p>
   <p>
     <button type="submit">Send</button>
