@@ -8,7 +8,7 @@ I like trying to understand how the world works. And pretty things. And iced tea
 
 Lawrence Pilch, Toronto, Canada
 
-<form name = "submitMsg" action = "/thanks.md">
+<form name = "submitMsg" action = "/page/thanks.md">
   <p>
     <label>Name: <input type="text" name = "name" size = "40"></label>
   </p>
