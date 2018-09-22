@@ -11,7 +11,7 @@ Lawrence Pilch, Toronto, Canada
 <hr>
 
 
-<form name="submitMeme" action="/page/thanks.md">
+<form name="submitMeme" action="/page/thanks">
   <p>
     <label>Name: <input type="text" name="name" size="40"></label>
   </p>
