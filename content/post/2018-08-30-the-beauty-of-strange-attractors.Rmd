@@ -28,8 +28,7 @@ Classic examples of chaotic systems include the [weather](https://en.wikipedia.o
 Why strange? I bet you're wondering what's "strange" about this attractor? There don't seem to be agreed upon definitions of attractors, let alone strange attractors so it's a tricky question to answer. If you really need to know I refer you to the man who co-coined the term, [David Ruelle](http://www.ams.org/notices/200607/what-is-ruelle.pdf).
 
 The paths traced by predictable attractors aren't that interesting. However, with certain equations, known as strange attractors, the trajectories appear to skip around randomly and the images formed by tracing these trajectories can be beautiful. 
-
-![](/img/4_clifford_images_for blog.png)
+![](/img/3col_9.png)
 These are a few examples from the new header of this blog which generates two new random Clifford Attractors every minute. Instead of tracing the path of one point, these images were formed by tracing the path of 50,000 points. Here's an image with one hundred million points. It immediately reminded me of a Dale Chihuly glass series, [Baskets](https://www.chihuly.com/work/baskets). Coincidence? Absolutely! But still kind of neat.
 ![](/img/chihuly_600x600.png)
 
