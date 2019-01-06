@@ -1,0 +1,1791 @@
+---
+title: Where Do Refugees Go?
+author: Lawrence Pilch
+date: '2019-01-06'
+slug: where-do-refugees-go
+categories:
+  - Canada
+  - Visualization
+tags: []
+subtitle: "Hint: It's Not North America"
+---
+
+<script src="/rmarkdown-libs/kePrint/kePrint.js"></script>
+
+
+<p>Imagine you’ve been forced from your home and country for fear for your life. Unbeknownst to you you are joining twenty million fellow travellers in a quest for safety. You quickly realize that you have three choices. One, to join a UNHCR sponsored refugee camp where you will be sheltered and fed but usually not allowed to work for fear of driving down domestic wages. Two, to live illegally in cities without support and work illegally and potentially face exploitation. Three, sometimes at great peril try to reach a European country and convince the authorities there that you qualify as a refugee. What would <em>you</em> do? Refugees continue to remain in the news. So I wanted to gain a deeper understanding of the issue. What is a refugee? Where do they come from and where do they go?</p>
+<p>If people are compelled to move from their home because of persecution, war or violence the United Nations deems them internally displaced persons. The moment they cross a country border they may become a refugee if their claim of fear of persecution is considered well-founded by a host country. Sometimes they are referred to as asylum seekers. Refugees have a list of legal protections spelled out in the <a href="https://www.unhcr.org/3b66c2aa10">Convention and Protocol Relating to the Status of Refugees</a>. In Canada, the 1951 Convention and 1967 Protocol are implemented through the <a href="https://laws-lois.justice.gc.ca/eng/acts/i-2.5/page-1.html">Immigration and Refugee Protection Act</a>.</p>
+<p>Right now, more people have been forcibly displaced from their home through persecution, conflict, violence or human rights violations than even after WW II. This is curious because, if you believe Steven Pinker the Harvard University psychologist, the world is a much more <a href="https://stevenpinker.com/files/pinker/files/has_the_decline_of_violence_reversed_since_the_better_angels_of_our_nature_was_written_2017.pdf">peaceful</a> place than it’s ever been before. Though <a href="https://www.thenation.com/article/waiting-for-steven-pinkers-enlightenment/">not everyone agrees</a>.</p>
+<p>The Oxford Professor, Alexander Betts, attributes the rise in the refugee population to the increase in the number of <em>fragile states</em>:</p>
+<blockquote>
+<p>While there are now fewer repressive or authoritarian states than in the Cold War era, there has been an increase in the number of fragile states since the end of the Cold War. This trend means fewer people are fleeing persecution resulting from the acts of states, while more are fleeing human rights deprivations resulting from the omissions of weak states that are unable or unwilling to ensure fundamental rights. - <a href="https://www.fmreview.org/fragilestates/betts">Alexander Betts</a></p>
+</blockquote>
+<p>Whatever the exact cause, it can’t be denied that the current number of refugees globally is a large, hard problem.</p>
+<p><img src="/img/glob_refugee_popn_1951_2017.svg" /></p>
+<p>As of the end of 2017 these five countries accounted for 68% of all refugees worldwide: Syria, Afghanistan, South Sudan, Somalia, Myanmar. The <a href="https://en.wikipedia.org/wiki/Sankey_diagram">Sankey diagram</a> below shows the origin countries of refugees on the left and their acceptance as refugees in a host country on the right. More than half of Syria’s 6.3 million refugees are in <a href="https://www.bloomberg.com/news/features/2018-12-12/an-endless-flood-of-syrian-refugees-tests-turkey-s-tolerance">Turkey</a>.</p>
+<div class="flourish-embed" data-src="visualisation/152562" data-height="900px">
+
+</div>
+<script src="https://public.flourish.studio/resources/embed.js"></script>
+<p>The line flowing to Canada is so thin because of geography. Surrounded by three oceans and a single country to the south, Canada is a hard place to get to. Canadian rules state that there are only two ways to become accepted as a refugee:</p>
+<ol style="list-style-type: decimal">
+<li>Be chosen by the United Nations Refugee Agency (UNHCR), along with private sponsors for resettlement. You cannot apply directly to Canada for resettlement.</li>
+<li>Apply at any port of entry to Canada. This means an airport, seaport or land border. Knocking on the door of the Canadian embassy in Turkey won’t get you very far.</li>
+</ol>
+<p>How well is this system working? It’s easy to see how many refugees Canada has accepted but quite another thing to evaluate it. Is this number good? Can we do better? I find it helpful as a baseline to see see what other countries do. That doesn’t mean it’s right for Canada but it layers on more context to the issue.</p>
+<p>Let’s stick with the 23 host countries in the Sankey diagram above and compare the number of refugees they’ve accepted from anywhere in 2017. What single measurement fairly reflects how many refugees a country absorbs? What is fair? Is it fair that a country with a GDP of 26 billion should accept more than a country with a GDP of almost 20 trillion, one thousand times greater? I’ll assume that richer and more populous countries should accept more refugees and our measure of comparison should reflect this.
+<br><br></p>
+<img src="/img/refugee_gdp_per_cap.svg" />
+<style>
+.nobullet li {
+  list-style-type: none;
+  font-size: 12px;
+  text-indent: 0px;
+}
+</style>
+<div class="nobullet">
+<ul>
+<li>Note: This is a log graph so as to be able to include the very high numbers at the bottom while maintaining differentiation with the small numbers.</li>
+</ul>
+</div>
+<p><br></p>
+<p>Using this measurement, Canada ranks 22<sup>nd</sup> out of 23 countries. Even below the U.S! How is that possible? Although the U.S. is 1.3X wealthier per person than Canada they accept 2.7X more refugees than Canada, just not from countries that are creating the most refugees. That’s not America’s focus. Here is where all of America’s refugees came from in 2017.</p>
+<div style="border: 0px solid #ddd; padding: 10px; overflow-y: scroll; height: 500px; overflow-x: scroll; width:100%; ">
+<table class="table table-hover table-responsive table-condensed" style="width: auto !important; float: left; margin-right: 10px;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Rank
+</th>
+<th style="text-align:left;">
+Origin
+</th>
+<th style="text-align:left;">
+Number
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">China</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 100.00%">74,476</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">El Salvador</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 25.19%">18,763</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Haiti</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 22.90%">17,055</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Guatemala</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 20.10%">14,971</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Egypt</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 16.01%">11,926</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+6
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Honduras</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 13.57%">10,107</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+7
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ethiopia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 13.41%"> 9,987</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+8
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mexico</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 10.35%"> 7,709</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+9
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Syrian Arab Rep.</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 9.78%"> 7,282</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Nepal</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 9.27%"> 6,907</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+11
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Iraq</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 8.23%"> 6,130</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+12
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Iran (Islamic Rep. of)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 7.43%"> 5,536</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+13
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Russian Federation</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 7.34%"> 5,463</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+14
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Venezuela (Bolivarian Republic of)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 7.25%"> 5,402</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+15
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Eritrea</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 6.91%"> 5,145</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+16
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">India</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 6.49%"> 4,836</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+17
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Various/Unknown</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 6.05%"> 4,506</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+18
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Colombia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.73%"> 4,264</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+19
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cameroon</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 5.36%"> 3,992</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+20
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Pakistan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 4.44%"> 3,308</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+21
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Guinea</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.09%"> 2,305</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+22
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Somalia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 3.08%"> 2,297</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+23
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Kenya</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.80%"> 2,087</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+24
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Indonesia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.46%"> 1,834</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+25
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ukraine</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.43%"> 1,812</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+26
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Armenia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.23%"> 1,663</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+27
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Myanmar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.18%"> 1,623</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+28
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Afghanistan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.10%"> 1,564</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+29
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Belarus</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.06%"> 1,537</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+30
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Albania</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.05%"> 1,527</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+31
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Gambia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 2.02%"> 1,503</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+32
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Rep. of Moldova</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.88%"> 1,400</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+33
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sudan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.86%"> 1,382</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+34
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Congo</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.79%"> 1,331</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+35
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Uganda</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.75%"> 1,301</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+36
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Kyrgyzstan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.71%"> 1,270</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+37
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sri Lanka</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.71%"> 1,270</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+38
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Côte d’Ivoire</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.70%"> 1,263</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+39
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bangladesh</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.68%"> 1,248</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+40
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Uzbekistan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.62%"> 1,210</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+41
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mali</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.60%"> 1,191</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+42
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Liberia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.58%"> 1,179</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+43
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Burkina Faso</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.56%"> 1,163</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+44
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Nigeria</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.55%"> 1,154</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+45
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Rwanda</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.45%"> 1,079</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+46
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Zimbabwe</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.41%"> 1,049</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+47
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Serbia and Kosovo (S/RES/1244 (1999))</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.40%"> 1,039</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+48
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ecuador</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.27%"> 948</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+49
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mauritania</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.27%"> 944</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Dem. Rep. of the Congo</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.26%"> 939</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+51
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mongolia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.03%"> 766</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+52
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Burundi</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 1.00%"> 747</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+53
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Kazakhstan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.95%"> 707</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+54
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Jamaica</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.94%"> 697</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+55
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Togo</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.81%"> 604</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+56
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Brazil</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.80%"> 593</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+57
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Nicaragua</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.76%"> 563</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+58
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Yemen</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.74%"> 549</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+59
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Peru</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.71%"> 528</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+60
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sierra Leone</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.70%"> 523</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+61
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Stateless</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.61%"> 455</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+62
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cuba</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.58%"> 431</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+63
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Jordan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.57%"> 428</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+64
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Turkey</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.57%"> 428</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+65
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Ghana</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.54%"> 399</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+66
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Saudi Arabia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.53%"> 391</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+67
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Senegal</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.52%"> 388</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+68
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Georgia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.51%"> 382</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+69
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Lebanon</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.51%"> 378</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+70
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Romania</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.50%"> 371</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+71
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bulgaria</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.47%"> 352</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+72
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Chad</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.45%"> 335</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+73
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Azerbaijan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.40%"> 298</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+74
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Tajikistan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.38%"> 283</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+75
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Djibouti</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.38%"> 282</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+76
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Libya</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.38%"> 280</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+77
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Estonia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.36%"> 266</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+78
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Viet Nam</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.34%"> 256</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+79
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Fiji</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.31%"> 231</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+80
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Central African Rep.</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.28%"> 210</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+81
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bahamas</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.24%"> 179</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+82
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Dominican Rep.</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.24%"> 179</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+83
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Costa Rica</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.23%"> 170</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+84
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Turkmenistan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.21%"> 159</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+85
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Angola</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.21%"> 157</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+86
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Philippines</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.19%"> 145</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+87
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cambodia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.19%"> 139</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+88
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Israel</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.19%"> 138</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+89
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Niger</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.19%"> 138</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+90
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">United Rep. of Tanzania</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.18%"> 133</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+91
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Algeria</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.18%"> 131</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+92
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Kuwait</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.17%"> 130</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+93
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Morocco</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.15%"> 114</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+94
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bolivia (Plurinational State of)</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.15%"> 113</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+95
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Montenegro</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.15%"> 109</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+96
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Lao People’s Dem. Rep.</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.15%"> 108</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+97
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">The former Yugoslav Republic of Macedonia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.15%"> 108</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+98
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bosnia and Herzegovina</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.14%"> 101</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+99
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Benin</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.13%"> 97</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+100
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Malaysia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.12%"> 93</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+101
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Guyana</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.10%"> 75</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+102
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Argentina</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.07%"> 55</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+103
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Trinidad and Tobago</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.07%"> 55</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+104
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Tunisia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.07%"> 54</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+105
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bahrain</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 45</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+106
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Namibia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 45</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+107
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Zambia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 44</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+108
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Belize</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 43</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+109
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Bhutan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 43</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+110
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Canada</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.06%"> 42</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+111
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Gabon</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 40</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+112
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Germany</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 40</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+113
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">South Africa</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 40</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+114
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">United Arab Emirates</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 39</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+115
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">United Kingdom</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 39</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+116
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Curaçao</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 35</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+117
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Croatia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.05%"> 34</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+118
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Malawi</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 33</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+119
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Belgium</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 32</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+120
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Mauritius</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 31</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+121
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Saint Vincent and the Grenadines</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 31</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+122
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Rep. of Korea</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 29</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+123
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Thailand</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 29</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+124
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Chile</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.04%"> 27</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+125
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">France</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 24</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+126
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Grenada</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 24</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+127
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Guinea-Bissau</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 24</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+128
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Poland</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 23</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+129
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Italy</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 20</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+130
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Lithuania</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 20</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+131
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Latvia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 19</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+132
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Niue</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 19</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+133
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Paraguay</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.03%"> 19</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+134
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Czech Rep.</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 18</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+135
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Hungary</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 18</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+136
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Madagascar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 17</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+137
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Greece</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 15</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+138
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Panama</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 15</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+139
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Singapore</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 15</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+140
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Turks and Caicos Islands</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 14</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+141
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Netherlands</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 13</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+142
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Qatar</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 13</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+143
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Dem. People’s Rep. of Korea</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.02%"> 12</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+144
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Spain</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 11</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+145
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Dominica</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 10</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+146
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Slovakia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 10</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+147
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Equatorial Guinea</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 9</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+148
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Saint Lucia</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 9</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+149
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Suriname</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 9</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+150
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Sweden</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 8</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+151
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Marshall Islands</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 7</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+152
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">South Sudan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 7</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+153
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Cayman Islands</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 6</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+154
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Japan</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 6</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+155
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Lesotho</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 6</span>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+156
+</td>
+<td style="text-align:left;">
+<span style="     color: black;">Maldives</span>
+</td>
+<td style="text-align:left;width: 10cm; ">
+<span style="display: inline-block; border-radius: 0px; padding-right: 0px; background-color: #49CA69; width: 0.01%"> 6</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Almost half came from China, El Salvador, Haiti, Guatemala, and Egypt. If you scroll through the list you’ll have a tough time finding Syria because the U.S. accepted zero refugees from Syria in 2017. The 42 refugees from Canada were likely, “children born in Canada to refugees who had been temporarily in Canada before entering the US” according to the UNHCR.</p>
+<p>The U.S. statistics get me thinking about Uganda. How does a country with 0.1% of the GDP and 13% of the population accept 4.7X more refugees in 2017? To most westerners the only things that probably come to mind about Uganda are Idi Amin in the 70s and the Israeli raid at Entebbe. So it’s probably surprising that Uganda is increasingly looked upon as a <a href="https://www.theguardian.com/commentisfree/2018/jun/26/europe-learn-africa-refugees-solutions">model</a> on how to integrate refugees. But always with <a href="https://www.migrationpolicy.org/article/can-ugandas-breakthrough-refugee-hosting-model-be-sustained">bumps</a> along the way.</p>
+<p>Alexander Betts who I quoted earlier thinks a lot about refugees. To understand this multi-faceted issue greater you can read a book he co wrote <a href="https://www.penguin.co.uk/articles/2017/refuge-extract/"><em>Refuge: Transforming a Broken Refugee System</em></a> or listen to his
+<a href="https://www.ted.com/talks/alexander_betts_our_refugee_system_is_failing_here_s_how_we_can_fix_it?language=en">TED talk</a></p>
