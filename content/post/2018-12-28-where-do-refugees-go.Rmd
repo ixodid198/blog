@@ -1,7 +1,7 @@
 ---
 title: Where Do Refugees Go?
 author: Lawrence Pilch
-date: '2019-01-06'
+date: '2019-01-05'
 slug: where-do-refugees-go
 categories:
   - Canada
@@ -9,7 +9,13 @@ categories:
 tags: []
 subtitle: "Hint: It's Not North America"
 ---
-Imagine you've been forced from your home and country for fear for your life. Unbeknownst to you you are joining twenty million fellow travellers in a quest for safety. You quickly realize that you have three choices. One, to join a UNHCR sponsored refugee camp where you will be sheltered and fed but usually not allowed to work for fear of driving down domestic wages. Two, to live illegally in cities without support and work illegally and potentially face exploitation. Three, sometimes at great peril try to reach a European country and convince the authorities there that you qualify as a refugee. What would *you* do? Refugees continue to remain in the news. So I wanted to gain a deeper understanding of the issue. What is a refugee? Where do they come from and where do they go?
+Imagine you've been forced from your home and country for fear for your life. Unbeknownst to you you are joining twenty million fellow travellers in a quest for safety. You quickly realize that you have three choices. 
+
+1. Join a UNHCR sponsored refugee camp where you will be sheltered and fed but usually not allowed to work for fear of driving down domestic wages. Living a life on [hold](https://www.theguardian.com/global-development/2016/jan/27/life-dadaab-three-generations-of-refugees-isolated-from-kenyan-society).
+2. Live in urban areas without support and work illegally and potentially face exploitation. 
+3. Sometimes at great peril try to reach a safer country and convince the authorities there that you qualify as a refugee. 
+
+What would *you* do? Refugees continue to remain in the news. So I wanted to gain a deeper understanding of the issue. What is a refugee? Where do they come from and where do they go?
 
 If people are compelled to move from their home because of persecution, war or violence the United Nations deems them internally displaced persons. The moment they cross a country border they may become a refugee if their claim of fear of persecution is considered well-founded by a host country. Sometimes they are referred to as asylum seekers. Refugees have a list of legal protections spelled out in the [Convention and Protocol Relating to the Status of Refugees](https://www.unhcr.org/3b66c2aa10). In Canada, the 1951 Convention and 1967 Protocol are implemented through the [Immigration and Refugee Protection Act](https://laws-lois.justice.gc.ca/eng/acts/i-2.5/page-1.html).
 
@@ -99,7 +105,7 @@ us2017 %>%
   
   rename("Origin" = origin) %>%
   kable("html", escape = F,  align = c("l", "l")) %>%
-  kable_styling(bootstrap_options = c("hover", "responsive", "condensed"), full_width = F, position = "float_left")  %>%
+  kable_styling(bootstrap_options = c("hover", "responsive", "condensed"), full_width = FALSE, position = "float_left")  %>%
   column_spec(3, width = "10cm") %>% 
   scroll_box(width = "100%", 
              height = " 500px",
@@ -107,7 +113,16 @@ us2017 %>%
 
 
 ```
-
+<style type="text/css">
+h4 { /* Header 2 */
+    font-size: 8px;
+    font-family: "lato";
+    color: grey;
+    text-align: right;
+    font-weight: normal;
+}
+</style>
+#### Source: UNHCR
 
 Almost half came from China, El Salvador, Haiti, Guatemala, and Egypt. If you scroll through the list you'll have a tough time finding Syria because the U.S. accepted zero refugees from Syria in 2017. The 42 refugees from Canada were likely, "children born in Canada to refugees who had been temporarily in Canada before entering the US" according to the UNHCR.
 
