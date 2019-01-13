@@ -124,7 +124,7 @@ h4 { /* Header 2 */
 </style>
 #### Source: UNHCR
 
-Almost half came from China, El Salvador, Haiti, Guatemala, and Egypt. If you scroll through the list you'll have a tough time finding Syria because the U.S. accepted zero refugees from Syria in 2017. The 42 refugees from Canada were likely, "children born in Canada to refugees who had been temporarily in Canada before entering the US" according to the UNHCR.
+Almost half came from China, El Salvador, Haiti, Guatemala, and Egypt. The 42 refugees from Canada were likely, "children born in Canada to refugees who had been temporarily in Canada before entering the US" according to the UNHCR.
 
 The U.S. statistics got me thinking about Uganda. How does a country with 0.1% of the GDP of the U.S. and 13% of the population accept 4.7X more refugees in 2017? Obviously, geography is a factor that has put Uganda in close proximity to countries in turmoil. Yet, even after absorbing more than one million refugees, 95% of [Ugandans](https://www.rescue.org/sites/default/files/document/2858/ircuganda.pdf) approved or strongly approved of, "Government providing	security	assistance	to	refugees." At the same time, 51% of [Americans](http://www.pewresearch.org/fact-tank/2018/05/24/republicans-turn-more-negative-toward-refugees-as-number-admitted-to-u-s-plummets/) believe the U.S. has a responsibility to accept refugees into the country. Broken down by party lines it's a vast chasm between the 74% of Democrats who believe the US has a responsibility and the 68% of Republicans who state that the U.S. does not have a responsibility to accept refugees into the country.
 
