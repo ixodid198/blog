@@ -9,6 +9,8 @@ categories:
 tags: []
 subtitle: "Hint: It's Not North America"
 ---
+THIS IS A TEST
+
 Imagine you've been forced from your home and country for fear for your life. Unbeknownst to you you are joining twenty million fellow travellers in a quest for safety. You quickly realize that you have three choices. 
 
 1. Join a UNHCR sponsored refugee camp where you will be sheltered and fed but usually not allowed to work for fear of driving down domestic wages - lving a life on [hold](https://www.theguardian.com/global-development/2016/jan/27/life-dadaab-three-generations-of-refugees-isolated-from-kenyan-society).
