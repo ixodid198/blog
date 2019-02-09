@@ -75,18 +75,10 @@ The final algorithm is the current top dog in the TSP solving race, [Concorde](h
 
 Here are the four tours:
 
-<iframe>
-```{r echo = FALSE, message = FALSE, warning = FALSE}
-library("slickR")
-
-img <- c("../../static/img/ON413_nn_2.png",
-         "../../static/img/ON413_cheapest_insertion_2.png", 
-         "../../static/img/ON413_farthest_insertion_2.png",
-         "../../static/img/ON413_concorde_2.png")
-
-slickR(obj = img, slideId = 'ex1', height = 675, width = 540)
-```
-</iframe>
+![](/img/ON413_nn_2.png)
+![](/img/ON413_cheapest_insertion_2.png)
+![](/img/ON413_farthest_insertion_2.png)
+![](/img/ON413_concorde_2.png)
 
 One of the pioneers of linear programming was George Dantzig who came up with a method, the Simplex method, for finding the optimal solution to a linear programming problem. There’s a classic story about him that is worth repeating. 
 
