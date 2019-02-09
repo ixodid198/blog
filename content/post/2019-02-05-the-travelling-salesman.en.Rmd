@@ -1,0 +1,107 @@
+---
+title: The Travelling Salesman
+author: Lawrence Pilch
+date: '2019-02-05'
+slug: the-travelling-salesman
+categories:
+  - Canada
+  - Mathematics
+  - Visualization
+tags:
+  - Canada
+  - Mathematics
+  - Visualization
+subtitle: ''
+---
+
+Ontario has 413 uniquely named municipalities comprising 99.3% of its total population of 13,448,494 (2016). Suppose you wanted to visit each of them in your jet-powered helicopter starting from Toronto. What order of cities results in the shortest total path?
+
+This is variation on the classic travelling salesman problem (TSP) that has intrigued and bedevilled computational mathematicians for years. It is the rare mathematical challenge that is understandable by everyone and yet efforts to solve it have involved computer science, complexity theory, optimization theory and linear programming and influenced fields as diverse as logistics, genetics, manufacturing, telecommunications, astronomy, and neuroscience.
+
+The official version asks you to find the shortest route that visits each city and returns to the starting city. The TSP is such a classic the University of Waterloo has a [site](http://www.math.uwaterloo.ca/tsp/history/index.html) dedicated to its history. To understand its place in mathematical history and even popular culture I recommend, [*In Pursuit of the Travelling Salesman*](https://press.princeton.edu/titles/9531.html) by William J, Cook.
+
+Mathematicians like it because it’s hard to come up with an algorithm that will guarantee a solution to every example of the problem. In fact, it’s so hard that no one has ever devised an algorithm to do so. If you know of a solution or can prove that there is no efficient solution there’s a [million dollars]([http://www.claymath.org/millennium-problems/millennium-prize-problems) waiting for you. This problem, formally known as P vs NP is one of seven Millennium Problems asked by the Clay Mathematics [Institute](http://www.claymath.org/millennium-problems).
+
+This isn’t to say that [all is lost](https://www.rogerebert.com/reviews/all-is-lost-2013). Just because no one has proved that there is a “good” algorithm that guarantees an exact, optimal solution doesn’t mean that there aren’t ways of solving the problem or getting really close in a “reasonable” amount of time. Before we look at them let’s understand what people mean when they talk about a “good algorithm”.
+
+Mathematicians require more formal terms than, “good”, and “reasonable”. It makes sense that a solution to a problem with more cities takes more time, but how much more time? Till tomorrow? Next year? The end of the universe a billion times over?
+
+Here’s a table that looks at the efficiency of algorithms and how quickly they could solve the TSP. Instead of using my iMac as a benchmark I assumed I was using IBM’s Summit [supercomputer](https://www.ibm.com/thought-leadership/summit-supercomputer/) which clocks in at about 25 million times faster than my iMac.
+<br><br>
+
+```{r txt, echo = FALSE, message = FALSE, warning = FALSE}
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+
+df <- tibble(
+  "Algorithm Efficiency" = c("$n^3$", "$2^n$", "$n^22^n$", "$\\frac{(n-1)!}{2}$"),
+#"10" = c("$5.0\\text{e-}15$s", "$5.1\\text{e-}15$s", "$5.1\\text{e-}13$s", #"$1.8\\text{e-}11$s"),
+  "25" = c("$7.8\\text{e-}14$s", "$1.7\\text{e-}10$s", "$1.0\\text{e-}7$s", "$2.5$ years"),
+  "52" = c("$7.0\\text{e-}13$s", "$0.022$s", "$61$s", "$1.2\\text{e+}41$ years"),
+  "100" = c("$5.0\\text{e-}12$s", "$200{,}189$ years", "$2{,}001{,}889{,}332$ years", "$7.4\\text{e+}130$ years"),
+"413" = c("$3.5\\text{e-}10$s", "$3.0\\text{e+}99$ years", "$6.0\\text{e+}104$ years", "$2.1\\text{e+}875$ years"),
+"Note" = c("Polynomial Time", "Exponential Time", "Best Known for TSP", "Brute Force")
+)
+kable(df) %>% 
+  add_header_above(c(" " = 1, "Number of Cities" = 5)) %>% 
+  kable_styling(font_size = 13)
+
+
+```
+
+Looking at the first row, suppose we came up with an algorithm to solve the TSP that did so in time proportional to the number of cities to the power of three, $n^3$. To use the language of computer scientists, the time to solve this is proportional to O($n^3$). This is called Big O Notation.
+
+As you scan across the row you can see that as the number of cities increase, the time to solve the TSP remains small. This is polynomial time and it’s what mathematicians mean by “good”. Contrast that with the next row, $2^n$. Here, somewhere between 52 and 100 cities the time skyrockets to impractical and then on to silly-land considering the age of our universe is 1.4e+10 years old.
+
+The fastest guaranteed algorithm to solve the TSP in time proportional to $n^22^n$ was discovered in 1962 and no one has come up with anything better since. Clearly, this is not a “good” algorithm because of its exponential term and only looks good in comparison to the brute force approach shown on the last row.
+
+If we relax the very rigid guarantee-to-find-an optimal-solution restraint then things begin to look a lot brighter. We can even go back to my iMac to see actual run times.
+<br><br>
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+df <- readRDS("../../static/data/tsp_info_p.rda")
+
+kable(df, format.args = list(big.mark = ",")) %>% 
+  column_spec(2,  monospace = FALSE)
+```
+<br>
+The nearest_neighbour algorithm is probably what most of us would try at first. The greatest thing about it is that it’s easy to understand and fast. Start in Toronto, look for the closest city and go there. However, it rarely results in the shortest path.
+
+The next two algorithms are members of a class of algorithms called insertion algorithms. Start with a tour of only a few cities and grow it by enclosing one new city as if you were expanding a rubber band. Choosing the new city that keeps the new, sub-tour as small as possible is called, cheapest-insertion. Choosing the new city that is furthest from the existing sub-tour is called, farthest-insertion. 
+
+The final algorithm is the current top dog in the TSP solving race, [Concorde](https://en.wikipedia.org/wiki/Concorde_TSP_Solver). Although not guaranteed to find the shortest path in polynomial time it often does find the optimal solution using the power of [linear programming](https://www.analyticsvidhya.com/blog/2017/02/lintroductory-guide-on-linear-programming-explained-in-simple-english/) which greatly reduces the complexity of the problem.  In fact, the shortest path starting from Toronto and visiting the 412 other municipalities in Ontario and ending in Mississauga is 10,162 km. This is almost 20% shorter than the nearest neighbourhood algorithm.
+
+Here are the four tours:
+
+```{r echo = FALSE, message = FALSE, warning = FALSE}
+library("slickR")
+
+img <- c("../../static/img/ON413_nn_2.png",
+         "../../static/img/ON413_cheapest_insertion_2.png", 
+         "../../static/img/ON413_farthest_insertion_2.png",
+         "../../static/img/ON413_concorde_2.png")
+
+slickR(obj = img, slideId = 'ex1', height = 675, width = 540)
+```
+
+One of the pioneers of linear programming was George Dantzig who came up with a method, the Simplex method, for finding the optimal solution to a linear programming problem. There’s a classic story about him that is worth repeating. 
+
+>An event in Dantzig's life became the origin of a famous story in 1939, while he was a graduate student at UC Berkeley. Near the beginning of a class for which Dantzig was late, professor Jerzy Neyman wrote two examples of famously unsolved statistics problems on the blackboard. When Dantzig arrived, he assumed that the two problems were a homework assignment and wrote them down. According to Dantzig, the problems "seemed to be a little harder than usual", but a few days later he handed in completed solutions for the two problems, still believing that they were an assignment that was overdue.<br><br> Six weeks later, Dantzig received a visit from an excited professor Neyman, who was eager to tell him that the homework problems he had solved were two of the most famous unsolved problems in statistics. He had prepared one of Dantzig's solutions for publication in a mathematical journal. - [Wikipedia](https://en.wikipedia.org/wiki/George_Dantzig)
+
+
+Inspired by Antonio’s brilliantly creative [blog](https://fronkonstin.com/2018/04/04/the-travelling-salesman-portrait/), I applied the TSP to Beethoven. Randomly selecting a few thousand points and connecting the path.
+
+Original Image - [Wikipedia](https://en.wikipedia.org/wiki/Ludwig_van_Beethoven#/media/File:Beethoven.jpg)
+![](/img/beethoven_orig.png)
+
+Path Connected with Straight Lines
+![](/img/beethoven_TSP_two_opt_B.png)
+
+Dot the "Cities"
+![](/img/beethoven_TSP_two_opt_B_thin_dots.png)
+
+Thicker Lines Shaded Proportional to Original Density. (Squint and more details appear.)
+![](/img/beethoven_TSP_strt_20000_grayscale_crop.png)
+
