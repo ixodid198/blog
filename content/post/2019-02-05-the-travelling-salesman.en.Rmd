@@ -98,6 +98,3 @@ Dot the "Cities"
 
 Thicker Lines Shaded Proportional to Original Density. (Squint and more details appear.)
 ![](/img/beethoven_TSP_strt_20000_grayscale_crop.png)
-
-
-<iframe src="https://lawrencepilch.com/tsp/" height="675" width="540"></iframe>
