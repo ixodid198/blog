@@ -20,13 +20,13 @@ This is variation on the classic travelling salesman problem (TSP) that has intr
 
 The official version asks you to find the shortest route that visits each city and returns to the starting city. The TSP is such a classic the University of Waterloo has a [site](http://www.math.uwaterloo.ca/tsp/history/index.html) dedicated to its history. To understand its place in mathematical history and even popular culture I recommend, [*In Pursuit of the Travelling Salesman*](https://press.princeton.edu/titles/9531.html) by William J, Cook.
 
-Mathematicians like it because it’s hard to come up with an algorithm that will guarantee a solution to every example of the problem. In fact, it’s so hard that no one has ever devised an algorithm to do so. If you know of a solution or can prove that there is no efficient solution there’s a [million dollars]([http://www.claymath.org/millennium-problems/millennium-prize-problems) waiting for you. This problem, formally known as P vs NP is one of seven Millennium Problems asked by the Clay Mathematics [Institute](http://www.claymath.org/millennium-problems).
+Mathematicians like it because it’s hard to come up with an algorithm that will guarantee a solution to every example of the problem. In fact, it’s so hard that no one has ever devised an algorithm to do so. If you know of a solution or can prove that there is no efficient solution there’s a [million dollars](http://www.claymath.org/millennium-problems/millennium-prize-problems) waiting for you. This problem, formally known as P vs NP is one of seven Millennium Problems asked by the Clay Mathematics [Institute](http://www.claymath.org/millennium-problems).
 
-This isn’t to say that [all is lost](https://www.rogerebert.com/reviews/all-is-lost-2013). Just because no one has proved that there is a “good” algorithm that guarantees an exact, optimal solution doesn’t mean that there aren’t ways of solving the problem or getting really close in a “reasonable” amount of time. Before we look at them let’s understand what people mean when they talk about a “good algorithm”.
+This isn’t to say that [all is lost](https://www.rogerebert.com/reviews/all-is-lost-2013). Just because no one has proved that there is a “good” algorithm that guarantees an exact, optimal solution doesn’t mean that there aren’t ways of solving the problem or getting really close in a “reasonable” amount of time. Before we look at them let’s understand what people mean when they talk about a “good" algorithm.
 
 Mathematicians require more formal terms than, “good”, and “reasonable”. It makes sense that a solution to a problem with more cities takes more time, but how much more time? Till tomorrow? Next year? The end of the universe a billion times over?
 
-Here’s a table that looks at the efficiency of algorithms and how quickly they could solve the TSP. Instead of using my iMac as a benchmark I assumed I was using IBM’s Summit [supercomputer](https://www.ibm.com/thought-leadership/summit-supercomputer/) which clocks in at about 25 million times faster than my iMac.
+Here’s a table that looks at the efficiency of algorithms and how quickly they could solve the TSP. Instead of using my iMac as a benchmark I assumed I upgraded to IBM’s Summit [supercomputer](https://www.ibm.com/thought-leadership/summit-supercomputer/) which clocks in at about 25 million times faster than my iMac.
 <br><br>
 
 ```{r txt, echo = FALSE, message = FALSE, warning = FALSE}
@@ -55,9 +55,9 @@ Looking at the first row, suppose we came up with an algorithm to solve the TSP 
 
 As you scan across the row you can see that as the number of cities increase, the time to solve the TSP remains small. This is polynomial time and it’s what mathematicians mean by “good”. Contrast that with the next row, $2^n$. Here, somewhere between 52 and 100 cities the time skyrockets to impractical and then on to silly-land considering the age of our universe is 1.4e+10 years old.
 
-The fastest guaranteed algorithm to solve the TSP in time proportional to $n^22^n$ was discovered in 1962 and no one has come up with anything better since. Clearly, this is not a “good” algorithm because of its exponential term and only looks good in comparison to the brute force approach shown on the last row.
+The fastest guaranteed algorithm to solve the TSP in time proportional to $n^22^n$ was discovered in 1962 and no one has come up with anything better since. Clearly, this is not a “good” algorithm because of its exponential term and only looks good in comparison to the brute force approach that examines every possible path shown on the last row.
 
-If we relax the very rigid guarantee-to-find-an optimal-solution restraint then things begin to look a lot brighter. We can even go back to my iMac to see actual run times.
+If we relax the very rigid guaranteed-to-find-an optimal-solution restraint then things begin to look a lot brighter. We can even go back to my iMac to see actual run times.
 <br><br>
 
 ```{r echo = FALSE, message = FALSE, warning = FALSE}
@@ -99,3 +99,5 @@ Dot the "Cities"
 Thicker Lines Shaded Proportional to Original Density. (Squint and more details appear.)
 ![](/img/beethoven_TSP_strt_20000_grayscale_crop.png)
 
+
+<iframe src="https://lawrencepilch.com/tsp/" height="675" width="540"></iframe>
