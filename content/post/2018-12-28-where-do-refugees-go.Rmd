@@ -6,7 +6,9 @@ slug: where-do-refugees-go
 categories:
   - Canada
   - Visualization
-tags: []
+tags: 
+  - Canada
+  - Visualization
 subtitle: "Hint: It's Not North America"
 ---
 Imagine you've been forced from your home and country for fear for your life. Unbeknownst to you you are joining twenty million fellow travellers in a quest for safety. You quickly realize that you have three choices. 
