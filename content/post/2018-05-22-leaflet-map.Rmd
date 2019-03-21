@@ -22,7 +22,7 @@ The city's Major Crime Indicator Glossary defines the crime of break and enter a
 
 # Create neighbourhood map of toronto
 # Colour 140 neighbourhoods according to B&E activity (2014-2017)
-# This is the version that's on the blog
+# This is the version that's on the blog. From blog > to_crime > be_per_hood_LIVE.R
 
 library(tidyverse)
 library(ggmap)
