@@ -16,7 +16,7 @@ The Toronto Police make public the data for all the crimes committed in the city
 
 Leaflet is a popular open-source JavaScript library for interactive maps. RStudio makes a package that enables you to build Leaflet maps from R.
 
-The city's Major Crime Indicator Glossary defines the crime of break and enter as, "The act of entering a place with the intent to commit an indictable offence therein." Hovering your mouse over each neighbourhood displays the rank of each neighbourhood, with one being the area that has had the *greatest* number of B&Es per person over the period 2014-2017. To make the rank a little more meaningful, I also show how each neighbourhood compares to the average rate of B&Es in the city.
+The city's Major Crime Indicator Glossary defines the crime of break and enter as, "The act of entering a place with the intent to commit an indictable offence therein." Hovering your mouse over each neighbourhood displays the rank of each neighbourhood with one being the area that has had the *greatest* number of B&Es per person over the period 2014-2017. To make the rank a little more meaningful, I also show how each neighbourhood compares to the average rate of B&Es in the city.
 
 ```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
