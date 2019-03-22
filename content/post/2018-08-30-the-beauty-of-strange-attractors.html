@@ -17,18 +17,22 @@ subtitle: ''
 <p>Dynamic systems are those where something changes over time according to a set of rules. They are found in many fields of study including, physics, chemistry, geology, biology and economics. Examples include, the planets orbiting around the sun, the vibration of an airplane wing, and the diffusion of drugs in your body.</p>
 <p>In mathematics, the something that changes over time can be points in a plane that change according to the rules of a function, which in a general form looks like this:</p>
 <p><span class="math display">\[x_1(t+1) = F_1(x_1(t), x_2(t),...,x_m(t))~~~~~(1)\]</span></p>
-<p>So if we know the state of the function at time zero we can determine its state at any time, <em>t</em>. The function F<sub>1</sub> determines the state <span class="math inline">\(x_1=F(x_0)\)</span> at time t = 1 by continually applying the function to determine all future states. This is known as a discrete dynamical system.</p>
+<p>So if we know the state of the function at time zero we can determine its state at any time, <em>t</em>.
+The function F<sub>1</sub> determines the state <span class="math inline">\(x_1=F(x_0)\)</span> at time t = 1 by continually applying the function to determine all future states. This is known as a discrete dynamical system.</p>
 <p>An attractor is what the behaviour of a system settles down to. Think of the path traced by a weight on the end of a spring. This ends up at a fixed point whereas a path traced by the end of a pendulum metronome is a loop – both behaviours are predictable and regular. Strange attractors exhibit seemingly random, chaotic behaviour. Knowing the initial conditions of the system doesn’t allow you to predict its state far into the future.</p>
 <p>Classic examples of chaotic systems include the <a href="https://en.wikipedia.org/wiki/Butterfly_effect">weather</a>, <a href="https://www.youtube.com/watch?v=mIQ4lEaiO9I">smoke</a>, and a <a href="https://www.youtube.com/watch?v=U39RMUzCjiU">double pendulum</a>.</p>
 <p>Why strange? I bet you’re wondering what’s “strange” about this attractor? There don’t seem to be agreed upon definitions of attractors, let alone strange attractors so it’s a tricky question to answer. If you really need to know I refer you to the man who co-coined the term, <a href="http://www.ams.org/notices/200607/what-is-ruelle.pdf">David Ruelle</a>.</p>
-<p>The paths traced by predictable attractors aren’t that interesting. However, with certain equations, known as strange attractors, the trajectories appear to skip around randomly and the images formed by tracing these trajectories can be beautiful. <img src="/img/3col_9.png" /> These are a few examples from the new header of this blog which generates two new random Clifford Attractors every minute. Instead of tracing the path of one point, these images were formed by tracing the path of 50,000 points. Here’s an image with one hundred million points. It immediately reminded me of a Dale Chihuly glass series, <a href="https://www.chihuly.com/work/baskets">Baskets</a>. Coincidence? Absolutely! But still kind of neat. <img src="/img/chihuly_600x600.png" /></p>
+<p>The paths traced by predictable attractors aren’t that interesting. However, with certain equations, known as strange attractors, the trajectories appear to skip around randomly and the images formed by tracing these trajectories can be beautiful.
+<img src="/img/3col_9.png" />
+These are a few examples from the new header of this blog which generates two new random Clifford Attractors every minute. Instead of tracing the path of one point, these images were formed by tracing the path of 50,000 points. Here’s an image with one hundred million points. It immediately reminded me of a Dale Chihuly glass series, <a href="https://www.chihuly.com/work/baskets">Baskets</a>. Coincidence? Absolutely! But still kind of neat.
+<img src="/img/chihuly_600x600.png" /></p>
 <hr />
 <img src="/img/basket_chihuly_600x400.png" />
 <style>
 .nobullet li {
   list-style-type: none;
   font-size: 12px;
-  text-indent: 20px;
+  text-indent: 50px;
 }
 </style>
 <div class="nobullet">
@@ -38,12 +42,18 @@ subtitle: ''
 </ul>
 </div>
 <p>The equations I used to generate these images are called Clifford Attractors, named after <a href="http://www.pickover.com/">Clifford Pickover</a>, a polymath with 500 patents 50 books and interests in melding art, science, and mathematics. These equations are a specific, concrete example of equation <span class="math inline">\((1)\)</span>.</p>
-<p><span class="math display">\[x_{n+1} = sin(a~y_n) + c~cos(a~x_n)~~~~~(2)\]</span> <span class="math display">\[y_{n+1} = sin(b~x_n) + d~cos(b~y_n)~~~~~(3)\]</span> If we take a set of random points on the plane and iterate them through these functions the form of this specific strange attractor defined by the parameters a, b, c, d as well as the initial starting points, quickly comes into view.</p>
-<p>This animated gif shows a series of random points as they are “attracted” to points on the plane. <img src="/img/animatespheres.gif" /> The colour of each point reflects how often the path trajectories pass through the points.</p>
+<p><span class="math display">\[x_{n+1} = sin(a~y_n) + c~cos(a~x_n)~~~~~(2)\]</span>
+<span class="math display">\[y_{n+1} = sin(b~x_n) + d~cos(b~y_n)~~~~~(3)\]</span>
+If we take a set of random points on the plane and iterate them through these functions the form of this specific strange attractor defined by the parameters a, b, c, d as well as the initial starting points, quickly comes into view.</p>
+<p>This animated gif shows a series of random points as they are “attracted” to points on the plane.
+<img src="/img/animatespheres.gif" />
+The colour of each point reflects how often the path trajectories pass through the points.</p>
 <p>I asked Dr. Pickover what drove him to discover his attractors. They were for a novel he was writing, <a href="https://www.amazon.com/Chaos-Wonderland-Visual-Adventures-Fractal/dp/031212774X"><em>Chaos in Wonderland: Visual Adventures in a Fractal World</em></a> which creatively combines science fiction, mathematics, astronomy, and computer graphics to explain chaos theory – the science behind many intricate and unpredictable patterns in mathematics and nature.</p>
 <blockquote>
 <p>The story involves a race of beings called Latoocarfians, who live on Ganymede, Jupiter’s largest moon. These Latoocarfians, it turns out, spend their days dreaming up beautiful mathematical images. Social status in their society “is not achieved through political prowess or financial fritinancy” but through “thoughts of mathematical beauty. The more beautiful the pattern, the greater the individual’s prestige and position.” The creatures display the patterns on their semiconductor heads. - Clifford Pickover</p>
 </blockquote>
-<p>Try playing around with Clifford Attractors <a href="https://lawrencepilch.com/chaos">here</a>. The first four sliders adjust the variables a, b, c, d that are shown in equations <span class="math inline">\((2)\)</span> and <span class="math inline">\((3)\)</span>. Stick with “Low” resolution until you find an interesting shape to minimize waiting, then increase the detail to “Medium” to take another look.</p>
+<p>Try playing around with Clifford Attractors <a href="https://lawrencepilch.com/chaos">here</a>.
+The first four sliders adjust the variables a, b, c, d that are shown in equations <span class="math inline">\((2)\)</span> and <span class="math inline">\((3)\)</span>.
+Stick with “Low” resolution until you find an interesting shape to minimize waiting, then increase the detail to “Medium” to take another look.</p>
 <p>Only about 7% of parameter settings exhibit chaotic behaviours. The Chaos Meter is based on Lyapunov Exponents which measure a system’s sensitivity to initial conditions. To determine whether an image is chaotic, I create a shadow set of points at time zero with each point slightly shifted from the original. If the difference between the two solutions grows larger with each iteration through the function we have a chaotic system.</p>
 <p>Thanks to <a href="http://paulbourke.net/fractals/clifford/">Pete Werner</a> and <a href="http://petewerner.blogspot.com/">Paul Bourke</a> for answering some of my Clifford Attractor implementation questions. As well as to Clifford Pickover for explaining the origins of his namesake attractors.</p>

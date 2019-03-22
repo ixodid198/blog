@@ -39,7 +39,7 @@ These are a few examples from the new header of this blog which generates two ne
 .nobullet li {
   list-style-type: none;
   font-size: 12px;
-  text-indent: 20px;
+  text-indent: 50px;
 }
 </style>
   <div class="nobullet">
