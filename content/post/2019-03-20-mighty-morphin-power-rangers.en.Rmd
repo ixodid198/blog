@@ -2,7 +2,7 @@
 title: Mighty Morphin' Letters
 author: Lawrence Pilch
 date: '2019-03-20'
-slug: mighty-morphin-power-rangers
+slug: mighty-morphin-letters
 categories:
   - Visualization
 tags:
