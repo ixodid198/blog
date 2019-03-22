@@ -11,4 +11,6 @@ subtitle: ''
 ---
 Apropos of nothing I was thinking about how impressed I was when I first saw the morphing faces in Michael Jackson's *Black or White* 1991 short [film](https://www.youtube.com/watch?v=pTFE8cirkdQ) (face morph begins at 5:27) directed by John Landis. Then I saw Thomas Lin Pedersen's [transformr](https://github.com/thomasp85/transformr) package and thought I'd play around a little. The result is [here](https://www.lawrencepilch.com/morph). The slower the cooler it looks, but the longer the wait to generate the animation. Enjoy. 
 
+![](/img/ani.gif)
+
 Note: Here's an oral [history](https://www.cartoonbrew.com/vfx/oral-history-morphing-michael-jacksons-black-white-144015.html) of the work that went into the morphing faces. 
